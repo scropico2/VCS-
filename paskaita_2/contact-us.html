@@ -4,6 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us!</title>
+
+    <style>
+      fieldset {
+        margin-bottom: 16px;
+      }
+      legend {
+        color: crimson;
+      }
+    </style>
   </head>
   <body>
     <h2>Contact Us</h2>
@@ -55,5 +64,45 @@
       value="Arts"
       name="subject-options" />
     <label for="subject-three">Arts</label>
+
+    <br />
+    <br />
+    <form>
+      <fieldset>
+        <legend>What is your favorite color?</legend>
+        <input type="radio" id="red" value="red" name="colors" />
+        <label for="red">Red</label>
+        <br />
+        <input type="radio" id="blue" value="blue" name="colors" />
+        <label for="blue">Blue</label>
+        <br />
+        <input type="radio" id="green" value="green" name="colors" checked />
+        <label for="green">Green</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Favorite Pizza?</legend>
+        <input type="radio" id="pizza-yes" value="yes" name="pizza" required />
+        <label for="pizza-yes">Yes</label>
+        <br />
+        <input type="radio" id="pizza-no" value="no" name="pizza" />
+        <label for="pizza-no">No</label>
+      </fieldset>
+      <fieldset>
+        <legend>Favorite season?</legend>
+        <input type="radio" id="spring" value="spring" name="season" />
+        <label for="spring">Spring</label>
+        <br />
+        <input type="radio" id="summer" value="summer" name="season" />
+        <label for="summer">Summer</label>
+        <br />
+        <input type="radio" id="winter" value="winter" name="season" />
+        <label for="winter">Winter</label>
+        <br />
+        <input type="radio" id="autumn" value="autumn" name="season" />
+        <label for="autumn">Autumn</label>
+      </fieldset>
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
