@@ -1,25 +1,62 @@
 :root {
+  --cream: #f6efe6;
   --latte: #d5b9a0;
-  --cream: #f4f0e9;
+  --espresso: #3e2c23;
   --mocha: #7b5539;
-  --espresso: #4a3728;
+  --card: #fffbf5;
+  --line: #e2cdb8;
+  --text: #3a3a3a;
 }
 
 body {
   background-color: var(--cream);
 }
 
-header {
-  background-color: var(--latte);
-  border-radius: 12px;
-  display: block;
-  text-align: center;
-  padding-bottom: 12px;
-  padding-top: 12px;
-  margin: auto;
+h1 {
+  color: var(--espresso);
 }
 
-h2 {
-  color: var(--espresso);
-  font-weight: 600px;
+h4 {
+  color: var(--mocha);
+  font-weight: 200;
+}
+
+.card {
+  background-color: var(--card);
+  
+  padding: 6px;
+  margin: 24px;
+  border-radius: 12px;
+}
+
+header {
+  background-color: var(--latte);
+  text-align: center;
+  padding: 6px;
+  margin-left: 24px;
+  margin-right: 24px;
+  border-radius: 12px;
+}
+.subheader {
+  color: var(--mocha);
+  border-bottom: solid var(--line);
+}
+
+.item {
+  font-weight: bold;
+
+}
+
+.price {
+  color: var(--text);
+  color: var(--mocha);
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  border-top:solid var(--line);
+  padding: 12px;
+  color: var(--mocha) ;
+  justify-content: center;
 }
