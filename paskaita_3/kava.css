@@ -1,0 +1,25 @@
+:root {
+  --latte: #d5b9a0;
+  --cream: #f4f0e9;
+  --mocha: #7b5539;
+  --espresso: #4a3728;
+}
+
+body {
+  background-color: var(--cream);
+}
+
+header {
+  background-color: var(--latte);
+  border-radius: 12px;
+  display: block;
+  text-align: center;
+  padding-bottom: 12px;
+  padding-top: 12px;
+  margin: auto;
+}
+
+h2 {
+  color: var(--espresso);
+  font-weight: 600px;
+}
