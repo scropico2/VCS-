@@ -13,6 +13,23 @@
   --text-caption: #5f8794;
   --text-link: #3e6b7a;
 }
+:root {
+  --font-heading: "Playfair Display", Georgia, serif;
+  --font-body: "Lora", Georgia, serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1,
+h3 {
+  font-family: var(--font-heading);
+}
+
+h1 {
+  font-weight: 900;
+}
 
 body {
   background-color: var(--bg-page);
