@@ -1,0 +1,12 @@
+img {
+  border-radius: 100px;
+  margin-top: 12px;
+}
+
+.header {
+  text-align: center;
+  background-color: yellowgreen;
+  border-radius: 20px;
+  margin: 20px 64px 12px 64px;
+  padding: 12px;
+}
