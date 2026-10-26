@@ -19,3 +19,119 @@
   --accent-tip: #d9a85b;
   --accent-warning: #d98a8a;
 }
+:root {
+  --font-heading: "Fraunces", Georgia, serif;
+  --font-body: "Nunito", Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bg-page);
+  font-family: var(--font-body);
+}
+.header {
+  background-color: var(--bg-header);
+  text-align: center;
+  margin: 12px 64px 8px 64px;
+  padding: 10px;
+  border-radius: 40px;
+  font-family: var(--font-heading);
+}
+.info {
+  color: var(--text-subtitle);
+  margin: 12px;
+}
+h2 {
+  color: var(--text-heading);
+  padding: 4px;
+}
+em {
+  color: var(--text-subtitle);
+}
+.rule {
+  background-color: var(--bg-card);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px 64px 12px 64px;
+  border-left: solid 12px var(--bg-header);
+  box-shadow: 0 4px 12px rgba(74, 107, 69, 0.2);
+}
+.mainHeader {
+  padding: 12px;
+  margin-left: 64px;
+}
+h3 {
+  font-weight: 800;
+  color: var(--bg-header);
+}
+.ruleText {
+  padding: 12px;
+  color: var(--text-subtitle);
+}
+.yellowRule {
+  background-color: var(--accent-tip);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px 64px 12px 64px;
+  border-left: solid 12px var(--bg-header);
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(74, 107, 69, 0.2);
+}
+.redRule {
+  background-color: var(--accent-warning);
+  border-radius: 12px;
+  padding: 10px;
+  margin: 20px 64px 12px 64px;
+  border-left: solid 12px var(--bg-header);
+  padding: 12px;
+  box-shadow: 0 4px 12px rgba(74, 107, 69, 0.2);
+}
+ul {
+  margin: 20px 64px 12px 64px;
+  padding: 12px;
+  color: var(--text-heading);
+}
+
+footer {
+  background-color: var(--accent-card);
+  margin: 20px 64px 12px 64px;
+  padding: 12px;
+  text-align: center;
+}
+
+.rule,
+.yellowRule,
+.redRule {
+  border-radius: 12px;
+  padding: 16px 20px;
+  margin: 20px 64px 12px 64px;
+  border-left: 8px solid var(--accent-card);
+  box-shadow: 0 4px 12px rgba(74, 107, 69, 0.15);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.rule:hover,
+.yellowRule:hover,
+.redRule:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(74, 107, 69, 0.22);
+}
+
+h2,
+h3 {
+  color: var(--text-heading);
+}
+
+h3 {
+  font-weight: 800;
+}
+.checkList {
+  margin: 20px 64px 12px 64px;
+}
+
+footer {
+  background-color: var(--bg-footer);
+  color: var(--text-heading);
+  border-radius: 12px;
+}
