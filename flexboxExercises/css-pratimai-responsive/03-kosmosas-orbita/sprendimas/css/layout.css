@@ -1,0 +1,145 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.feature img,
+.mission img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.member img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – eilutė: logotipas kairėje, meniu dešinėje, centruoti vertikaliai; .nav su tarpais; .header-cta – PASLĖPTAS telefone */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+}
+
+.nav {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+
+.header-cta {
+  display: none;
+}
+
+/* 5. .stats – po 2 rodiklius eilutėje (wrap + calc(50% - pusė gap)); .stat – skaičius virš teksto (stulpelis) */
+.hero {
+  padding: 3rem 1.25rem;
+}
+
+.hero-text {
+  margin-bottom: 2rem;
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  flex-basis: calc(50% - 0.5rem);
+  padding: 1rem;
+}
+
+/* 6. .steps – žingsniai vienas po kito (stulpelis); kiekvienas .step – su akcento linija KAIRĖJE (border-left 3px #22D3EE) */
+.timeline {
+  padding: 1rem 1.25rem 3rem;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.step {
+  padding: 1rem 1.25rem;
+  border-left: 3px solid #22D3EE;
+}
+
+.step p {
+  margin: 0.25rem 0 0;
+}
+
+/* 7. .feature ir .mission – nuotrauka virš teksto (stulpelis); .specs – stulpelis, .spec – pavadinimas kairėje, reikšmė dešinėje;
+      .crew-list – po 2 korteles eilutėje; .member – turinys centruotas */
+.feature,
+.mission {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0 1.25rem 3rem;
+}
+
+.feature img,
+.mission img {
+  border-radius: 1rem;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 1.25rem;
+}
+
+.spec {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid #1E293B;
+}
+
+.spec:last-child {
+  border-bottom: none;
+}
+
+.mission-head,
+.crew {
+  padding: 2rem 1.25rem;
+}
+
+.crew-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.member {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-basis: calc(50% - 0.5rem);
+  gap: 0.5rem;
+  padding: 1.25rem 0.75rem;
+  text-align: center;
+}
+
+.member p {
+  margin: 0;
+}
+
+.footer {
+  padding: 1.5rem 1.25rem;
+}

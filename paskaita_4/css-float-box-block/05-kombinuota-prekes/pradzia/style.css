@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f2f4f8;
+  color: #1e1e2e;
+}
+
+.shop {
+  width: 960px;
+  margin: 24px;
+}
+
+.shop h1 {
+  margin: 0 0 16px;
+  font-size: 26px;
+}
+
+.product {
+  background: #ffffff;
+  float: left;
+  width: 300px;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 2px solid #e2e8f0;
+  margin-right: 30px;
+  margin-bottom: 16px;
+}
+
+.product.last {
+  margin-right: 0px;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h3 {
+  margin: 8px 0;
+}
+
+.badge {
+  background: #dc2626;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.old {
+  font-size: 14px;
+  font-weight: normal;
+  color: #64748b;
+  text-decoration: line-through;
+}
+
+.btn {
+  background: #ea580c;
+  color: #ffffff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 12px;
+}
+
+.footer {
+  padding: 12px 16px;
+  background: #e2e8f0;
+  color: #475569;
+
+  clear: both;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Trys kortelės (.product) vienoje eilutėje, naudojant float */
+
+/* 2. Kiekviena kortelė lygiai 300px pločio su padding 16px ir rėmeliu 2px solid #E2E8F0 */
+
+/* 3. 30px tarpai tarp kortelių; paskutinė (.last) be tarpo – eilutė užima tiksliai 960px */
+
+/* 4. Nuolaidos žyma (.badge): padding 4px 8px, neišeina už eilutės ribų */
+
+/* 5. Mygtukas (.btn): per visą kortelės plotį, padding 12px */
+
+/* 6. Poraštė (.footer) – po kortelėmis, 16px tarpas nuo jų */

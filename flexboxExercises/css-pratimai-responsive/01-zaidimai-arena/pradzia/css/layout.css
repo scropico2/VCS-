@@ -1,0 +1,64 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.hero-img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.game-card img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+}
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.game-list {
+  display: flex;
+  flex-direction: column;
+}
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.tournament-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.tournament {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+}
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – stulpelis: logotipas virš meniu, abu centruoti; .nav – nuorodos vienoje eilutėje su tarpais */
+
+/* 5. .hero – stulpelis: nuotrauka virš teksto, su tarpu tarp jų */
+
+/* 6. .game-list – kortelės viena po kitos (stulpelis) su tarpais; .game-info – pavadinimas kairėje, įvertinimas dešinėje */
+
+/* 7. .tournament-list ir .tournament – stulpeliai: turnyrai vienas po kito, o kortelėje data, informacija, prizas ir mygtukas vienas po kito */

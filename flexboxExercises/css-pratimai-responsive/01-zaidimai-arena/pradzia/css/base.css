@@ -1,0 +1,70 @@
+/* base.css – bendri stiliai: šriftas, spalvos, mygtukai.
+   Čia NĖRA maketo (flex) ir media užklausų.
+   Paletė ir šriftas – žr. užduoties skaidrę; tarpus ir apvalinimus parinkite patys. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #0e0b16;
+  font-family: "Exo 2";
+  color: #e7e4f0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 40em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.active {
+  color: #7cff4f;
+}
+.logo {
+  color: #e7e4f0;
+  font-size: 2em;
+}
+.logo span {
+  color: #7cff4f;
+}
+
+.nav,
+.rating {
+  color: #9a94ad;
+}
+.btn {
+  display: block;
+  text-align: center;
+  font-weight: 700;
+  background-color: #7cff4f;
+  color: #0e0b16;
+  border-radius: 12px;
+  padding: 6px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+.tag,
+.date {
+  background-color: #b14cff;
+  border-radius: 12px;
+  padding: 6px;
+  width: fit-content;
+}
+.game-card,
+.tournament {
+  background-color: #1a1625;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šriftas Exo 2 (Google Fonts) visam puslapiui; fonas #0E0B16, tekstas #E7E4F0 */
+
+/* 2. Akcento spalva #7CFF4F: .logo span, .nav .active ir .rating; antrinis tekstas #9A94AD: .genre ir .footer */
+
+/* 3. .btn – fonas #7CFF4F, tekstas #0E0B16; .tag fonas ir .date tekstas – #B14CFF; .game-card ir .tournament – fonas #1A1625 */

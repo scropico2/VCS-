@@ -1,0 +1,174 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.artist img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.slots,
+.perks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Pirkimo juosta prilipusi prie ekrano apačios – jau paruošta */
+.buy-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body {
+  padding-bottom: 5rem; /* kad .buy-bar neuždengtų puslapio apačios */
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – eilutė su perkėlimu (wrap): logotipas viršuje, .nav – po juo per visą plotį (flex-basis: 100%),
+      nuorodos išdėstytos tolygiai (space-between); .header-btn – PASLĖPTAS */
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  flex-basis: 100%;
+  font-weight: 500;
+}
+
+.header-btn {
+  display: none;
+}
+
+/* 5. .hero-facts – trys faktai eilutėje po lygiai; .artist-list – KARUSELĖ: viena eilutė (nowrap), slenkama į šoną (overflow-x: auto),
+      kiekvienas .artist – 70% pločio ir nesitraukia (flex: 0 0 70%) */
+.hero {
+  padding: 4rem 1.25rem;
+}
+
+.date {
+  margin: 0 0 0.5rem;
+  font-weight: 700;
+}
+
+.hero-facts {
+  display: flex;
+  max-width: 32rem;
+  margin: 2rem auto 0;
+}
+
+.hero-fact {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.artists,
+.lineup,
+.page-head,
+.tickets {
+  padding: 2.5rem 1.25rem 0;
+}
+
+.artist-list {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.artist {
+  flex: 0 0 70%;
+}
+
+.artist h3 {
+  padding: 1rem 1rem 0;
+}
+
+.artist p {
+  margin: 0.25rem 1rem 1rem;
+}
+
+/* 6. .days ir .tickets – stulpeliai su tarpais; .slots li – laikas kairėje, atlikėjas dešinėje;
+      .ticket – stulpelis, mygtukas visada apačioje; .ticket.featured – rodomas PIRMAS (order) */
+.days,
+.tickets {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.day {
+  padding: 1.25rem;
+}
+
+.day h3 {
+  margin-bottom: 0.75rem;
+}
+
+.slots li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.6rem 0;
+  border-top: 1px solid #F5E6D3;
+}
+
+.slots strong {
+  text-align: right;
+}
+
+.ticket {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 1.5rem;
+}
+
+.ticket .btn {
+  margin-top: auto;
+}
+
+.perks {
+  margin-bottom: 1rem;
+}
+
+.perks li {
+  padding: 0.25rem 0;
+}
+
+.ticket.featured {
+  order: -1;
+}
+
+.page-head p {
+  margin: 0.5rem 0 0;
+}
+
+.footer {
+  padding: 2.5rem 1.25rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+/* 7. .buy-bar – tekstas kairėje, mygtukas dešinėje, centruoti vertikaliai */
+.buy-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+}
+
+.buy-bar p {
+  margin: 0;
+}

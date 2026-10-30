@@ -1,0 +1,307 @@
+/* 1. (dalis) Šrifto prijungimas – failo pradžioje */
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;700;800&display=swap");
+
+/* Paletė ir šriftas – žr. užduoties skaidrę.
+   Tarpus (margin, padding, gap) ir apvalinimus (border-radius) parinkite patys.
+   Svarbu: @import rašomas pačioje failo pradžioje, prieš visas taisykles. */
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  font: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.avatar {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: cover;
+}
+
+.avatar-sm {
+  width: 2rem;
+  height: 2rem;
+  object-fit: cover;
+}
+
+.project-img {
+  width: 100%;
+  height: 10rem;
+  object-fit: cover;
+}
+
+.stat-value {
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šriftas Plus Jakarta Sans (Google Fonts); fonas #F4F5FB, tekstas #111827, .muted – #6B7280, .panel ir .stat – #FFFFFF */
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background: #F4F5FB;
+  color: #111827;
+}
+
+.muted {
+  margin: 0;
+  color: #6B7280;
+}
+
+.panel,
+.stat {
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
+}
+
+/* 2. .layout: šoninė juosta (.sidebar) 16rem pločio kairėje, .main užima likusį plotį; puslapis bent viso lango aukščio */
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 16rem;
+}
+
+.main {
+  flex: 1;
+  padding: 2rem 2.5rem;
+}
+
+/* 3. .sidebar: fonas #1E1B4B, šviesus tekstas; stulpelis, kuriame meniu viršuje, o .upgrade blokas prispaustas prie apačios */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-sizing: border-box;
+  padding: 2rem 1.25rem;
+  background: #1E1B4B;
+  color: #E0E7FF;
+}
+
+.logo {
+  display: block;
+  margin: 0 0 2rem 0.75rem;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.upgrade {
+  padding: 1.25rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.upgrade p {
+  margin: 0 0 1rem;
+}
+
+/* 4. .side-nav: nuorodos viena po kita; .active ir .btn – fonas #6366F1, baltas tekstas */
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.side-nav a {
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  color: #C7D2FE;
+}
+
+.side-nav .active,
+.btn {
+  background: #6366F1;
+  color: #FFFFFF;
+}
+
+.btn {
+  display: block;
+  padding: 0.6rem;
+  border-radius: 0.75rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+/* 5. .topbar: pasisveikinimas kairėje, paieška ir avataras dešinėje, centruoti vertikaliai */
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.topbar h1 {
+  margin: 0;
+}
+
+.topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.search {
+  width: 16rem;
+  padding: 0.6rem 1rem;
+  border: 1px solid #E5E7EB;
+  border-radius: 999px;
+}
+
+.avatar,
+.avatar-sm {
+  border-radius: 50%;
+}
+
+/* 6. .stats: keturios vienodo pločio kortelės; .up – #10B981, .warn – #F59E0B */
+.stats {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat {
+  flex: 1;
+}
+
+.stat p {
+  margin: 0;
+}
+
+.change {
+  font-weight: 700;
+}
+
+.up {
+  color: #10B981;
+}
+
+.warn {
+  color: #F59E0B;
+}
+
+/* 7. .panels: komandos skydelis dvigubai platesnis už projekto skydelį */
+.panels {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.team-panel {
+  flex: 2;
+}
+
+.project {
+  flex: 1;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.panel-head h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.link {
+  color: #6366F1;
+  font-weight: 700;
+}
+
+/* 8. .member: avataras, vardas su pareigomis ir žyma vienoje eilutėje; žyma prie dešinio krašto; .online – #10B981, .away – #F59E0B fonas */
+.member {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid #E5E7EB;
+}
+
+.member:last-child {
+  border-bottom: none;
+}
+
+.member-info {
+  flex: 1;
+}
+
+.name {
+  margin: 0;
+  font-weight: 700;
+}
+
+.badge {
+  padding: 0.3em 0.8em;
+  border-radius: 999px;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.online {
+  background: #10B981;
+}
+
+.away {
+  background: #F59E0B;
+}
+
+/* 9. .progress – 0.5rem aukščio, fonas #E5E7EB; .progress-bar – 68% pločio, #6366F1; .project-foot – tekstas kairėje, avatarai dešinėje */
+.project-img {
+  border-radius: 0.75rem;
+}
+
+.project h3 {
+  margin: 1rem 0 0.25rem;
+}
+
+.progress {
+  height: 0.5rem;
+  margin: 1.25rem 0 1rem;
+  border-radius: 999px;
+  background: #E5E7EB;
+}
+
+.progress-bar {
+  width: 68%;
+  height: 100%;
+  border-radius: 999px;
+  background: #6366F1;
+}
+
+.project-foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.percent {
+  font-weight: 700;
+}
+
+.avatars {
+  display: flex;
+  gap: 0.25rem;
+}

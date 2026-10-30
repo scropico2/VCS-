@@ -1,0 +1,40 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.artist img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.slots,
+.perks {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Pirkimo juosta prilipusi prie ekrano apačios – jau paruošta */
+.buy-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+body {
+  padding-bottom: 5rem; /* kad .buy-bar neuždengtų puslapio apačios */
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – eilutė su perkėlimu (wrap): logotipas viršuje, .nav – po juo per visą plotį (flex-basis: 100%),
+    nuorodos išdėstytos tolygiai (space-between); .header-btn – PASLĖPTAS */
+
+/* 5. .hero-facts – trys faktai eilutėje po lygiai; .artist-list – KARUSELĖ: viena eilutė (nowrap), slenkama į šoną (overflow-x: auto),
+    kiekvienas .artist – 70% pločio ir nesitraukia (flex: 0 0 70%) */
+
+/* 6. .days ir .tickets – stulpeliai su tarpais; .slots li – laikas kairėje, atlikėjas dešinėje;
+    .ticket – stulpelis, mygtukas visada apačioje; .ticket.featured – rodomas PIRMAS (order) */
+
+/* 7. .buy-bar – tekstas kairėje, mygtukas dešinėje, centruoti vertikaliai */

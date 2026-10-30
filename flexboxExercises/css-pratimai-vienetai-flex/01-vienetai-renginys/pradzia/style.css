@@ -1,0 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #f8fafc;
+  color: #0f172a;
+  line-height: 1.5;
+}
+
+.hero {
+  min-height: 50vh;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  min-width: 8vw;
+  background: #1e1b4b;
+  color: #ffffff;
+}
+h2 {
+  font-size: 1.75rem;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #a5b4fc;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero h1 {
+  margin: 0.25em 0;
+  line-height: 1.1;
+  font-size: 3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  margin: 0 0 1.5em;
+  color: #c7d2fe;
+}
+
+.btn {
+  padding: 0.75 1.5em;
+  display: inline-block;
+  background: #f97316;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.btn-small {
+  font-size: 0.875em;
+}
+.page {
+  width: 80%;
+  max-width: 48rem;
+  margin: 3rem auto;
+}
+
+.page h2 {
+  margin: 0 0 0.5em;
+}
+
+.agenda {
+  border: 1px solid;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #ffffff;
+}
+.agenda li {
+  border-bottom: 1px solid;
+  padding: 1em;
+}
+
+.time {
+  width: 4em;
+  display: inline-block;
+  color: #4f46e5;
+  font-weight: 600;
+}
+
+.note {
+  font-size: 0.875rem;
+  color: #64748b;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šrifto dydžiai tik rem: h1 – 3rem, .lead – 1.25rem, h2 – 1.75rem, .note – 0.875rem */
+
+/* 2. .hero – bent pusės lango aukščio (vh); šonuose padding 8vw, viršuje ir apačioje 3rem */
+
+/* 3. .btn – padding 0.75em 1.5em; .btn-small – font-size 0.875rem (jo padding turi sumažėti pats) */
+
+/* 4. .page – 80% tėvo pločio, bet ne platesnis nei 48rem, centruotas; tarpas iki .hero – 3rem */
+
+/* 5. .agenda – 1px rėmelis #E2E8F0; li – padding 1em, linija apačioje 1px; .time – 4em pločio */
+
+/* 6. Klausimas: ką pamatysite, jei html { font-size: 20px; }? Kas padidės, o kas – ne? (atsakymą parašykite komentare) */

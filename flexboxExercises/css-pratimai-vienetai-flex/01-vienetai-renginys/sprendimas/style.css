@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background: #F8FAFC;
+  color: #0F172A;
+  line-height: 1.5;
+}
+
+.hero {
+  background: #1E1B4B;
+  color: #FFFFFF;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #A5B4FC;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hero h1 {
+  margin: 0.25em 0;
+  line-height: 1.1;
+}
+
+.lead {
+  margin: 0 0 1.5em;
+  color: #C7D2FE;
+}
+
+.btn {
+  display: inline-block;
+  background: #F97316;
+  color: #FFFFFF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.page h2 {
+  margin: 0 0 0.5em;
+}
+
+.agenda {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  background: #FFFFFF;
+}
+
+.time {
+  display: inline-block;
+  color: #4F46E5;
+  font-weight: 600;
+}
+
+.note {
+  color: #64748B;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šrifto dydžiai tik rem: h1 – 3rem, .lead – 1.25rem, h2 – 1.75rem, .note – 0.875rem */
+h1 {
+  font-size: 3rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+.note {
+  font-size: 0.875rem;
+}
+
+/* 2. .hero – bent pusės lango aukščio (vh); šonuose padding 8vw, viršuje ir apačioje 3rem */
+.hero {
+  min-height: 50vh;
+  padding: 3rem 8vw;
+  box-sizing: border-box;
+}
+
+/* 3. .btn – padding 0.75em 1.5em; .btn-small – font-size 0.875rem (jo padding turi sumažėti pats) */
+.btn {
+  padding: 0.75em 1.5em;
+}
+
+.btn-small {
+  font-size: 0.875rem;
+}
+
+/* 4. .page – 80% tėvo pločio, bet ne platesnis nei 48rem, centruotas; tarpas iki .hero – 3rem */
+.page {
+  width: 80%;
+  max-width: 48rem;
+  margin: 3rem auto;
+}
+
+/* 5. .agenda – 1px rėmelis #E2E8F0; li – padding 1em, linija apačioje 1px; .time – 4em pločio */
+.agenda {
+  border: 1px solid #E2E8F0;
+}
+
+.agenda li {
+  padding: 1em;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+.time {
+  width: 4em;
+}
+
+/* 6. Klausimas: ką pamatysite, jei html { font-size: 20px; }? Kas padidės, o kas – ne? (atsakymą parašykite komentare) */
+/* Padidės viskas, kas nurodyta rem (šriftai, .page max-width, .hero padding viršuje),
+   ir viskas, kas nurodyta em (mygtukų padding, .time plotis), nes em skaičiuojamas
+   nuo elemento šrifto, o šis – nuo rem.
+   Nepasikeis: 1px rėmeliai (px), .page 80% (tėvo plotis), 8vw ir 50vh (langas). */

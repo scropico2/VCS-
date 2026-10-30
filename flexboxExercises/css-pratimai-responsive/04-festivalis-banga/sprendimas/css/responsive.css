@@ -1,0 +1,104 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Trys dydžiai: telefonas (iki 767px), planšetė (nuo 768px), kompiuteris (nuo 1024px). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 8. Nuo 768px: .header – viena eilutė (logotipas kairėje, meniu ir mygtukas dešinėje), .nav be 100% pločio;
+      .header-btn – matomas; .buy-bar – PASLĖPTAS, body padding-bottom – 0 */
+@media (min-width: 768px) {
+  .header {
+    flex-wrap: nowrap;
+    gap: 2rem;
+    padding: 1.25rem 2.5rem;
+  }
+
+  .logo {
+    margin-right: auto;
+  }
+
+  .nav {
+    flex-basis: auto;
+    gap: 2rem;
+  }
+
+  .header-btn {
+    display: inline-block;
+  }
+
+  .buy-bar {
+    display: none;
+  }
+
+  body {
+    padding-bottom: 0;
+  }
+
+  h1 {
+    font-size: 5rem;
+  }
+
+  .hero {
+    padding: 6rem 2.5rem;
+  }
+
+  /* 9. Nuo 768px: .artist-list – perkeliama (wrap), po 2 eilutėje; .days – po 2, TREČIA diena per visą plotį (flex-grow);
+        .tickets – .featured per visą plotį viršuje, kiti du bilietai greta po lygiai */
+  .artists,
+  .lineup,
+  .page-head,
+  .tickets {
+    padding: 3rem 2.5rem 0;
+  }
+
+  .artist-list {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  .artist {
+    flex: 0 0 calc(50% - 0.5rem);
+  }
+
+  .days,
+  .tickets {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .day,
+  .ticket {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+
+  .ticket.featured {
+    flex-basis: 100%;
+  }
+}
+
+/* 10. Nuo 1024px: .artist – po 4 eilutėje; .days – visos 3 dienos eilutėje;
+       .tickets – visi 3 eilutėje, .featured – VIDURYJE (order: 0) ir aukštesnis už kitus (align-items: center) */
+@media (min-width: 1024px) {
+  .artist {
+    flex: 1;
+  }
+
+  .day {
+    flex: 1;
+  }
+
+  .tickets {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .ticket,
+  .ticket.featured {
+    flex: 1;
+  }
+
+  .ticket.featured {
+    order: 0;
+    padding: 2.5rem 1.5rem;
+  }
+}

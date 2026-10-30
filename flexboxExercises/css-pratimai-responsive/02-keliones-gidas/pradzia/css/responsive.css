@@ -1,0 +1,13 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Breakpoint'ai: 768px (planšetė) ir 1024px (kompiuteris). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 9. Nuo 768px: .header – eilutė (logotipas kairėje, meniu dešinėje, .nav be 100% pločio);
+    .search – eilutė, įvestis užima likusią vietą; .filters – perkeliami (wrap) ir centruoti */
+
+/* 10. Nuo 768px: .dest-list – po 2 korteles eilutėje; .footer – trys stulpeliai po lygiai */
+
+/* 11. Nuo 1024px: po 3 korteles; .content – eilutė: .article užima likusią vietą, .facts – 20rem pločio DEŠINĖJE;
+     .gallery – po 4 nuotraukas; h1 – 3.5rem */

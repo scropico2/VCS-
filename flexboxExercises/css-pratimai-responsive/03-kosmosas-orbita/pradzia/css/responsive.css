@@ -1,0 +1,12 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Breakpoint'ai: 768px (planšetė) ir 1024px (kompiuteris). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 8. Nuo 768px: .header-cta – vėl matomas; .nav – per vidurį (tarp logotipo ir mygtuko); .stats – visi 4 vienoje eilutėje; h1 – 3.5rem */
+
+/* 9. Nuo 768px: .feature ir .mission – nuotrauka ir tekstas greta, po lygiai pločio, centruoti vertikaliai */
+
+/* 10. Nuo 1024px: .steps – visi 4 žingsniai eilutėje po lygiai, akcento linija VIRŠUJE vietoj kairės;
+     .member – po 4 eilutėje */

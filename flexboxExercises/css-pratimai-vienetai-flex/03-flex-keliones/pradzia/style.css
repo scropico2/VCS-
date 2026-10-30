@@ -1,0 +1,128 @@
+/* Paletė ir šriftas – žr. užduoties skaidrę.
+   Tarpus (margin, padding, gap) ir apvalinimus (border-radius) parinkite patys.
+   Svarbu: @import rašomas pačioje failo pradžioje, prieš visas taisykles. */
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* Fono nuotrauka su tamsiu sluoksniu – jau paruošta */
+.hero {
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.55), rgba(15, 23, 42, 0.55)),
+    url("https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  min-height: 80vh;
+}
+
+.card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover;
+}
+.navbar {
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  margin: 1em;
+  color: white;
+}
+
+.menu {
+  display: flex;
+  margin: 1em;
+  gap: 2em;
+}
+.menu a {
+  color: white;
+}
+.btn {
+  color: white;
+  background-color: #f97316;
+  padding: 0.5em;
+  border-radius: 1em;
+  margin: 1em;
+}
+.tag {
+  color: #0f766e;
+}
+.hero-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cards {
+  display: flex;
+  gap: 1.5em;
+}
+.card {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 1rem;
+  background: #ffffff;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+}
+.card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
+
+.newsletter {
+  color: white;
+  background-color: #0f766e;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form input {
+  flex: 1;
+  padding: 0.75em 1.25em;
+  border: none;
+  border-radius: 999px;
+  max-width: 20em;
+}
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šriftas DM Sans (Google Fonts); fonas #F8FAFC, tekstas #0F172A, .hero tekstas baltas (#FFFFFF), kortelių aprašymai #64748B */
+
+/* 2. .hero – bent 70vh aukščio stulpelis: .navbar viršuje, .hero-content užima likusią vietą ir yra centruotas abiem ašimis */
+
+/* 3. .navbar: logotipas, meniu ir mygtukas vienoje eilutėje, kraštuose ir per vidurį, centruoti vertikaliai; .menu nuorodos su tarpais */
+
+/* 4. .btn – fonas #F97316, baltas tekstas, be rėmelio; .tag ir .link – spalva #0F766E */
+
+/* 5. .section-head: antraštė kairėje, nuoroda dešinėje */
+
+/* 6. .cards: trys vienodo pločio ir aukščio kortelės (#FFFFFF); .card-footer (kaina + mygtukas) visada kortelės apačioje */
+
+/* 7. .newsletter: fonas #0F766E, baltas tekstas; tekstas ir forma greta po lygiai pločio; input užima visą formos plotį šalia mygtuko */

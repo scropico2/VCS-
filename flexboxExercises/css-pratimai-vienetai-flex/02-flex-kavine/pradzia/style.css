@@ -1,0 +1,119 @@
+/* Paletė ir šriftas – žr. užduoties skaidrę.
+   Tarpus (margin, padding, gap) ir apvalinimus (border-radius) parinkite patys.
+   Svarbu: @import rašomas pačioje failo pradžioje, prieš visas taisykles. */
+
+body {
+  margin: 0;
+  background-color: #fbf6f0;
+  color: #2b1d16;
+  font-family: "Poppins", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 1em;
+  padding-left: 1em;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 26rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  max-width: 70em;
+  margin: 0 auto;
+}
+.nav {
+  font-size: 1em;
+  display: flex;
+  gap: 1em;
+}
+.nav a {
+  color: #c26a2e;
+  font-size: 1.25em;
+  font-weight: 600;
+}
+.logo {
+  font-size: 2em;
+  font-weight: 600;
+  color: #c26a2e;
+  border: 1px solid;
+}
+.eyebrow {
+  font-size: 1.3em;
+  color: #c26a2e;
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3em;
+  max-width: 70em;
+  margin: 0 auto;
+  padding: 0 2em;
+}
+.hero-text {
+  flex: 1;
+}
+.hero-media {
+  flex: 1;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+.actions {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1em;
+}
+.btn {
+  padding: 1em;
+  border-radius: 1em;
+  background-color: #c26a2e;
+  color: white;
+  border: 2px solid #c26a2e;
+}
+.btn-outline {
+  background-color: transparent;
+  color: #c26a2e;
+  border: 2px solid #c26a2e;
+}
+.features {
+  display: flex;
+  gap: 1em;
+  max-width: 80em;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+.feature {
+  background-color: #ffffff;
+  flex: 1;
+
+  padding: 1.25em;
+  border-radius: 1em;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šriftas Poppins (Google Fonts) visam puslapiui; fonas #FBF6F0, tekstas  */
+
+/* 2. .header: logotipas kairėje, meniu dešinėje, abu sulygiuoti per vidurį vertikaliai */
+
+/* 3. .nav: nuorodos vienoje eilutėje su tarpais (gap); .logo ir .eyebrow – akcento spalva #C26A2E */
+
+/* 4. .hero: tekstas ir nuotrauka greta, po lygiai pločio, sulygiuoti per vidurį vertikaliai */
+
+/* 5. .actions: du mygtukai greta su tarpu; .btn – fonas #C26A2E, baltas tekstas; .btn-outline – permatomas fonas, rėmelis ir tekstas #C26A2E */
+
+/* 6. .features: trys vienodo pločio ir aukščio kortelės su baltu (#FFFFFF) fonu */

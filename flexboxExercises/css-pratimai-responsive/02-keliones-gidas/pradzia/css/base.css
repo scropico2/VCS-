@@ -1,0 +1,70 @@
+/* base.css – bendri stiliai: šriftai, spalvos, mygtukai.
+   Čia NĖRA maketo (flex) ir media užklausų.
+   Paletė ir šriftai – žr. užduoties skaidrę; tarpus ir apvalinimus parinkite patys. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  font: inherit;
+}
+
+/* Fono nuotrauka su tamsiu sluoksniu – jau paruošta */
+.hero {
+  background-image:
+    linear-gradient(rgba(31, 42, 55, 0.55), rgba(31, 42, 55, 0.55)),
+    url("https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Tekstui – Nunito Sans, antraštėms (h1, h2, h3, .logo) – Playfair Display; fonas #FFFBF5, tekstas #1F2A37 */
+h1,
+h2,
+h3,
+.logo {
+  font-family: "Playfair Display";
+  background-color: #fffbf5;
+  color: #1f2a37;
+}
+/* 2. Pagrindinė spalva #0E7490: .logo, .eyebrow, .price ir .chip.active fonas (tekstas baltas);
+    .btn – fonas #F59E0B, tekstas #1F2A37; .dest-card ir .facts – fonas #FFFFFF; antrinis tekstas #6B7280 */
+.logo,
+.eyebrow,
+.price,
+.chip-active {
+  color: #0e7490;
+}
+.btn {
+  background: #f59e0b;
+  color: #1f2a37;
+}
+.dest-card,
+.facts {
+  background-color: #ffffff;
+}
+/* 3. .footer – fonas #1F2A37, tekstas #FFFBF5 */
+.footer {
+  background-color: #1f2a37;
+  color: #fffbf5;
+}

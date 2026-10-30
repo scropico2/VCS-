@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>4 užduotis – projektų valdymo skydelis</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div>
+        <a class="logo" href="#">Taskly</a>
+        <nav class="side-nav">
+          <a class="active" href="#">Apžvalga</a>
+          <a href="#">Projektai</a>
+          <a href="#">Komanda</a>
+          <a href="#">Ataskaitos</a>
+          <a href="#">Nustatymai</a>
+        </nav>
+      </div>
+      <div class="upgrade">
+        <p><strong>Pro planas</strong><br>Neriboti projektai ir ataskaitos.</p>
+        <a class="btn" href="#">Atnaujinti</a>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div>
+          <h1>Labas, Rūta!</h1>
+          <p class="muted">Štai kas vyksta šią savaitę.</p>
+        </div>
+        <div class="topbar-right">
+          <input class="search" type="search" placeholder="Ieškoti projektų...">
+          <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&q=80" alt="Rūta">
+        </div>
+      </header>
+
+      <section class="stats">
+        <div class="stat">
+          <p class="muted">Aktyvūs projektai</p>
+          <p class="stat-value">12</p>
+          <p class="change up">+2 per savaitę</p>
+        </div>
+        <div class="stat">
+          <p class="muted">Atliktos užduotys</p>
+          <p class="stat-value">148</p>
+          <p class="change up">+18 %</p>
+        </div>
+        <div class="stat">
+          <p class="muted">Vėluojančios</p>
+          <p class="stat-value">5</p>
+          <p class="change warn">+1 per savaitę</p>
+        </div>
+        <div class="stat">
+          <p class="muted">Komandos nariai</p>
+          <p class="stat-value">8</p>
+          <p class="change up">+1 naujas</p>
+        </div>
+      </section>
+
+      <section class="panels">
+        <div class="panel team-panel">
+          <div class="panel-head">
+            <h2>Komanda</h2>
+            <a class="link" href="#">Visi nariai</a>
+          </div>
+          <ul class="team">
+            <li class="member">
+              <img class="avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80" alt="Ieva">
+              <div class="member-info">
+                <p class="name">Ieva Petraitė</p>
+                <p class="muted">UI dizainerė</p>
+              </div>
+              <span class="badge online">Prisijungusi</span>
+            </li>
+            <li class="member">
+              <img class="avatar" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80" alt="Tomas">
+              <div class="member-info">
+                <p class="name">Tomas Kazlauskas</p>
+                <p class="muted">Frontend programuotojas</p>
+              </div>
+              <span class="badge online">Prisijungęs</span>
+            </li>
+            <li class="member">
+              <img class="avatar" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&h=200&fit=crop&q=80" alt="Rūta">
+              <div class="member-info">
+                <p class="name">Rūta Jankauskienė</p>
+                <p class="muted">Projektų vadovė</p>
+              </div>
+              <span class="badge away">Susitikime</span>
+            </li>
+            <li class="member">
+              <img class="avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&q=80" alt="Mantas">
+              <div class="member-info">
+                <p class="name">Mantas Žukauskas</p>
+                <p class="muted">Backend programuotojas</p>
+              </div>
+              <span class="badge online">Prisijungęs</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="panel project">
+          <img class="project-img" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Nešiojamas kompiuteris su grafikais">
+          <h3>Svetainės perkūrimas</h3>
+          <p class="muted">Terminas: gruodžio 1 d.</p>
+          <div class="progress">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="project-foot">
+            <span class="percent">68 % atlikta</span>
+            <div class="avatars">
+              <img class="avatar-sm" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&q=80" alt="Ieva">
+              <img class="avatar-sm" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&q=80" alt="Tomas">
+              <img class="avatar-sm" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&q=80" alt="Mantas">
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

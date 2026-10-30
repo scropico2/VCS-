@@ -1,0 +1,147 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.dest-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.gallery img {
+  height: 8rem;
+  object-fit: cover;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – stulpelis, turinys centruotas; .nav – nuorodos per visą plotį, tolygiai išdėstytos (space-around) */
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.25rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+/* 5. .search – stulpelis: įvestis virš mygtuko, abu per visą plotį */
+.hero {
+  padding: 4rem 1.25rem;
+}
+
+.hero p {
+  margin: 1rem 0 2rem;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 40rem;
+  margin: 0 auto;
+}
+
+.search input {
+  padding: 0.75em 1em;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+/* 6. .filters – visi mygtukai vienoje eilutėje (nowrap), kas netelpa – slenkama į šoną (overflow-x: auto); .chip nesitraukia (flex-shrink: 0) */
+.destinations {
+  padding: 2rem 1.25rem 3rem;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.chip {
+  flex-shrink: 0;
+}
+
+/* 7. .dest-list – kortelės viena po kitos su tarpais; .dest-meta – trukmė kairėje, kaina dešinėje */
+.dest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dest-body {
+  padding: 1.25rem;
+}
+
+.dest-body h3,
+.dest-body p {
+  margin: 0 0 0.5rem;
+}
+
+.dest-meta {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.75rem;
+  border-top: 1px solid #F1E9DD;
+}
+
+/* 8. kryptis.html: .content – stulpelis, .facts rodomas PIRMAS (order); .fact – pavadinimas kairėje, reikšmė dešinėje;
+      .gallery – po 2 nuotraukas eilutėje (wrap + calc(50% - pusė gap)); .footer – stulpeliai vienas po kito */
+.dest-hero {
+  padding: 2rem 1.25rem 1rem;
+}
+
+.dest-hero p {
+  margin: 0.25rem 0;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 1rem 1.25rem 3rem;
+}
+
+.facts {
+  order: -1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+}
+
+.facts h3 {
+  margin: 0;
+}
+
+.fact {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.gallery img {
+  width: calc(50% - 0.375rem);
+  border-radius: 0.75rem;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem 1.25rem;
+}

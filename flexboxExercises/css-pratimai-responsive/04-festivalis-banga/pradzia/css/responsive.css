@@ -1,0 +1,14 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Trys dydžiai: telefonas (iki 767px), planšetė (nuo 768px), kompiuteris (nuo 1024px). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 8. Nuo 768px: .header – viena eilutė (logotipas kairėje, meniu ir mygtukas dešinėje), .nav be 100% pločio;
+    .header-btn – matomas; .buy-bar – PASLĖPTAS, body padding-bottom – 0 */
+
+/* 9. Nuo 768px: .artist-list – perkeliama (wrap), po 2 eilutėje; .days – po 2, TREČIA diena per visą plotį (flex-grow);
+      .tickets – .featured per visą plotį viršuje, kiti du bilietai greta po lygiai */
+
+/* 10. Nuo 1024px: .artist – po 4 eilutėje; .days – visos 3 dienos eilutėje;
+     .tickets – visi 3 eilutėje, .featured – VIDURYJE (order: 0) ir aukštesnis už kitus (align-items: center) */

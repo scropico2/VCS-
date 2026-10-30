@@ -1,0 +1,139 @@
+/* 1. (dalis) Šriftų prijungimas – failo pradžioje */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Grotesk:wght@400;500;700&display=swap");
+
+/* base.css – bendri stiliai: šriftai, spalvos, mygtukai.
+   Čia NĖRA maketo (flex) ir media užklausų.
+   Paletė ir šriftai – žr. užduoties skaidrę; tarpus ir apvalinimus parinkite patys. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Koncerto fonas su tamsiu sluoksniu – jau paruošta */
+.hero {
+  background-image:
+    linear-gradient(rgba(28, 25, 23, 0.55), rgba(28, 25, 23, 0.75)),
+    url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+  color: #FFFFFF;
+  text-align: center;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Tekstui – Space Grotesk, antraštėms (h1, h2, h3, .logo, .price, .hero-fact strong) – Bebas Neue; fonas #FFF7ED, tekstas #1C1917 */
+body {
+  font-family: "Space Grotesk", sans-serif;
+  background: #FFF7ED;
+  color: #1C1917;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.price,
+.hero-fact strong {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+h2 {
+  margin: 0 0 1.25rem;
+  font-size: 2.25rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1.75rem;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #E11D48;
+}
+
+/* 2. .btn – fonas #E11D48, tekstas baltas; .price – #E11D48; .time tekstas ir .badge fonas – #7C3AED; .hero h1 – #FACC15 */
+.btn {
+  display: inline-block;
+  padding: 0.7em 1.4em;
+  border-radius: 999px;
+  background: #E11D48;
+  color: #FFFFFF;
+  font-weight: 700;
+  text-align: center;
+}
+
+.price {
+  margin: 0.5rem 0;
+  font-size: 3rem;
+  color: #E11D48;
+}
+
+.time {
+  color: #7C3AED;
+  font-weight: 700;
+}
+
+.badge {
+  align-self: flex-start;
+  padding: 0.25em 0.75em;
+  border-radius: 999px;
+  background: #7C3AED;
+  color: #FFFFFF;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.hero h1 {
+  color: #FACC15;
+}
+
+.hero-fact strong {
+  font-size: 2.5rem;
+}
+
+/* 3. .artist, .day ir .ticket – fonas #FFFFFF; .ticket.featured ir .buy-bar – fonas #1C1917, tekstas #FFF7ED;
+      antrinis tekstas #78716C: .artist p, .page-head p, .footer */
+.artist,
+.day,
+.ticket {
+  border-radius: 1rem;
+  background: #FFFFFF;
+  overflow: hidden;
+}
+
+.ticket.featured,
+.buy-bar {
+  background: #1C1917;
+  color: #FFF7ED;
+}
+
+.artist p,
+.page-head p,
+.footer {
+  color: #78716C;
+}

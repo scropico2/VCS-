@@ -1,0 +1,84 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Breakpoint'ai: 768px (planšetė) ir 1024px (kompiuteris). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 8. Nuo 768px: .header-cta – vėl matomas; .nav – per vidurį (tarp logotipo ir mygtuko); .stats – visi 4 vienoje eilutėje; h1 – 3.5rem */
+@media (min-width: 768px) {
+  .header {
+    padding: 1.25rem 2.5rem;
+  }
+
+  .nav {
+    gap: 2rem;
+    font-size: 1rem;
+  }
+
+  .header-cta {
+    display: inline-block;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero {
+    padding: 6rem 2.5rem 4rem;
+  }
+
+  .hero-text {
+    max-width: 40rem;
+  }
+
+  .stat {
+    flex: 1;
+  }
+
+  /* 9. Nuo 768px: .feature ir .mission – nuotrauka ir tekstas greta, po lygiai pločio, centruoti vertikaliai */
+  .timeline,
+  .mission-head,
+  .crew {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .feature,
+  .mission {
+    flex-direction: row;
+    align-items: center;
+    gap: 3rem;
+    padding: 0 2.5rem 4rem;
+  }
+
+  .feature img,
+  .mission img,
+  .feature-text,
+  .specs {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .feature img,
+  .mission img {
+    height: 20rem;
+  }
+}
+
+/* 10. Nuo 1024px: .steps – visi 4 žingsniai eilutėje po lygiai, akcento linija VIRŠUJE vietoj kairės;
+       .member – po 4 eilutėje */
+@media (min-width: 1024px) {
+  .steps {
+    flex-direction: row;
+  }
+
+  .step {
+    flex: 1;
+    border-left: 1px solid #1E293B;
+    border-top: 3px solid #22D3EE;
+  }
+
+  .member {
+    flex: 1;
+  }
+}

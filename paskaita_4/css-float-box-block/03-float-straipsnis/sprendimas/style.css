@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F2F4F8;
+  color: #1E1E2E;
+}
+
+.post {
+  width: 640px;
+  margin: 24px;
+  padding: 24px;
+  background: #FFFFFF;
+  line-height: 1.5;
+}
+
+.post h1 {
+  margin-top: 0;
+  font-size: 26px;
+}
+
+.note {
+  padding: 12px 16px;
+  background: #EEF2FF;
+  color: #3730A3;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Naršyklės paveikslėlis plaukia kairėje, tekstas jį apteka; 16px tarpas iki teksto */
+.photo-left {
+  float: left;
+  margin-right: 16px;
+  margin-bottom: 8px;
+}
+
+/* 2. Serverio paveikslėlis plaukia dešinėje; 16px tarpas iki teksto */
+.photo-right {
+  float: right;
+  margin-left: 16px;
+  margin-bottom: 8px;
+}
+
+/* 3. Pastaba (.note) visada prasideda po paveikslėliais, per visą plotį */
+.note {
+  clear: both;
+}

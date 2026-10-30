@@ -1,0 +1,95 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Breakpoint'ai: 768px (planšetė) ir 1024px (kompiuteris). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 9. Nuo 768px: .header – eilutė (logotipas kairėje, meniu dešinėje, .nav be 100% pločio);
+      .search – eilutė, įvestis užima likusią vietą; .filters – perkeliami (wrap) ir centruoti */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+  }
+
+  .nav {
+    width: auto;
+    gap: 2rem;
+  }
+
+  .hero {
+    padding: 6rem 2.5rem;
+  }
+
+  .search {
+    flex-direction: row;
+  }
+
+  .search input {
+    flex: 1;
+  }
+
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  /* 10. Nuo 768px: .dest-list – po 2 korteles eilutėje; .footer – trys stulpeliai po lygiai */
+  .destinations,
+  .dest-hero,
+  .content {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
+  .dest-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .dest-card {
+    flex-basis: calc(50% - 0.75rem);
+  }
+
+  .footer {
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2.5rem;
+  }
+
+  .footer-col {
+    flex: 1;
+  }
+}
+
+/* 11. Nuo 1024px: po 3 korteles; .content – eilutė: .article užima likusią vietą, .facts – 20rem pločio DEŠINĖJE;
+       .gallery – po 4 nuotraukas; h1 – 3.5rem */
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  .dest-card {
+    flex-basis: calc(33.333% - 1rem);
+  }
+
+  .content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 3rem;
+  }
+
+  .article {
+    flex: 1;
+  }
+
+  .facts {
+    order: 0;
+    flex: 0 0 20rem;
+  }
+
+  .gallery img {
+    width: calc(25% - 0.5625rem);
+  }
+}

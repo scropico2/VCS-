@@ -1,0 +1,133 @@
+/* 1. (dalis) Šrifto prijungimas – failo pradžioje */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+/* Paletė ir šriftas – žr. užduoties skaidrę.
+   Tarpus (margin, padding, gap) ir apvalinimus (border-radius) parinkite patys.
+   Svarbu: @import rašomas pačioje failo pradžioje, prieš visas taisykles. */
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.hero-media img {
+  width: 100%;
+  height: 26rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Šriftas Poppins (Google Fonts) visam puslapiui; fonas #FBF6F0, tekstas #2B1D16 */
+body {
+  font-family: "Poppins", sans-serif;
+  background: #FBF6F0;
+  color: #2B1D16;
+}
+
+/* 2. .header: logotipas kairėje, meniu dešinėje, abu sulygiuoti per vidurį vertikaliai */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 4rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+/* 3. .nav: nuorodos vienoje eilutėje su tarpais (gap); .logo ir .eyebrow – akcento spalva #C26A2E */
+.nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav a {
+  color: #2B1D16;
+}
+
+.logo,
+.eyebrow {
+  color: #C26A2E;
+}
+
+/* 4. .hero: tekstas ir nuotrauka greta, po lygiai pločio, sulygiuoti per vidurį vertikaliai */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  padding: 2rem 4rem 4rem;
+}
+
+.hero-text,
+.hero-media {
+  flex: 1;
+}
+
+.hero-media img {
+  border-radius: 1.5rem;
+}
+
+.eyebrow {
+  margin: 0;
+  font-weight: 600;
+}
+
+.hero h1 {
+  margin: 0.5rem 0 1rem;
+  font-size: 3rem;
+  line-height: 1.15;
+}
+
+/* 5. .actions: du mygtukai greta su tarpu; .btn – fonas #C26A2E, baltas tekstas; .btn-outline – permatomas fonas, rėmelis ir tekstas #C26A2E */
+.actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.8em 1.6em;
+  border: 2px solid #C26A2E;
+  border-radius: 999px;
+  background: #C26A2E;
+  color: #FFFFFF;
+  font-weight: 600;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #C26A2E;
+}
+
+/* 6. .features: trys vienodo pločio ir aukščio kortelės su baltu (#FFFFFF) fonu */
+.features {
+  display: flex;
+  gap: 1.5rem;
+  padding: 0 4rem 4rem;
+}
+
+.feature {
+  flex: 1;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: #FFFFFF;
+}
+
+.feature h3 {
+  margin: 0 0 0.5rem;
+}
+
+.feature p {
+  margin: 0;
+}

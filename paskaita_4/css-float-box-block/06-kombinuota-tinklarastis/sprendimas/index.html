@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <title>6 užduotis – tinklaraščio maketas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page">
+    <header class="header">
+      <a class="logo" href="#">dev.blog</a>
+      <ul class="nav">
+        <li><a href="#">Straipsniai</a></li>
+        <li><a href="#">Apie</a></li>
+        <li><a href="#">Kontaktai</a></li>
+      </ul>
+    </header>
+
+    <main class="content">
+      <h1>Kodėl verta naudoti border-box?</h1>
+      <p class="meta">
+        <span class="tag">CSS</span>
+        <span class="tag">Box model</span>
+        2026 m. spalio 25 d.
+      </p>
+      <img class="cover" src="img/box.svg" alt="Dėžutės modelis">
+      <p>
+        Numatytai width nurodo tik turinio plotį, todėl kiekvienas padding ir
+        border pikselis padidina elementą. Kai keli stulpeliai turi tilpti į
+        fiksuotą plotį, toks skaičiavimas greitai sugadina maketą.
+      </p>
+      <p>
+        Su box-sizing: border-box nurodytas plotis apima ir vidinę paraštę, ir
+        rėmelį, todėl 300px elementas visada lieka 300px. Dėl to dauguma
+        projektų šią taisyklę taiko visiems elementams.
+      </p>
+      <a class="more" href="#">Skaityti toliau</a>
+    </main>
+
+    <aside class="sidebar">
+      <h2>Kategorijos</h2>
+      <ul class="categories">
+        <li><a href="#">HTML</a></li>
+        <li><a href="#">CSS</a></li>
+        <li><a href="#">JavaScript</a></li>
+        <li><a href="#">Git</a></li>
+      </ul>
+    </aside>
+
+    <footer class="footer">© 2026 dev.blog</footer>
+  </div>
+</body>
+</html>

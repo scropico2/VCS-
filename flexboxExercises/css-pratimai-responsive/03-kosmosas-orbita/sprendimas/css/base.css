@@ -1,0 +1,133 @@
+/* 1. (dalis) Šriftų prijungimas – failo pradžioje */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Orbitron:wght@600;800&display=swap");
+
+/* base.css – bendri stiliai: šriftai, spalvos, mygtukai.
+   Čia NĖRA maketo (flex) ir media užklausų.
+   Paletė ir šriftai – žr. užduoties skaidrę; tarpus ir apvalinimus parinkite patys. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Kosmoso fonas su tamsiu sluoksniu – jau paruošta */
+.hero {
+  background-image:
+    linear-gradient(rgba(5, 8, 22, 0.6), #050816),
+    url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Tekstui – Inter, antraštėms (h1, h2, h3, .logo, .stat strong, .step-num) – Orbitron; fonas #050816, tekstas #E2E8F0 */
+body {
+  font-family: "Inter", sans-serif;
+  background: #050816;
+  color: #E2E8F0;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+.logo,
+.stat strong,
+.step-num {
+  font-family: "Orbitron", sans-serif;
+  line-height: 1.2;
+}
+
+h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 1.5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* 2. Akcentas #22D3EE: .logo span, .eyebrow, .stat strong, .step-num, .link;
+      antrinis tekstas #94A3B8: .stat span, .step p, .member p, .spec span, .footer */
+.logo span,
+.eyebrow,
+.stat strong,
+.step-num,
+.link {
+  color: #22D3EE;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.8rem;
+}
+
+.link {
+  font-weight: 600;
+}
+
+.stat span,
+.step p,
+.member p,
+.spec span,
+.footer {
+  color: #94A3B8;
+}
+
+.stat strong {
+  font-size: 1.75rem;
+}
+
+/* 3. .btn – fonas #22D3EE, tekstas #050816; .stat, .step, .member ir .specs – fonas #0F172A, 1px rėmelis #1E293B */
+.btn {
+  display: inline-block;
+  padding: 0.6em 1.4em;
+  border-radius: 999px;
+  background: #22D3EE;
+  color: #050816;
+  font-weight: 600;
+}
+
+.stat,
+.step,
+.member,
+.specs {
+  border: 1px solid #1E293B;
+  border-radius: 1rem;
+  background: #0F172A;
+}
+
+.footer {
+  border-top: 1px solid #1E293B;
+  font-size: 0.875rem;
+  text-align: center;
+}

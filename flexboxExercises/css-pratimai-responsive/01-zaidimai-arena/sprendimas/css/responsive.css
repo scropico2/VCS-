@@ -1,0 +1,73 @@
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Breakpoint'ai: 768px (planšetė) ir 1024px (kompiuteris). */
+
+/* ===== UŽDUOTYS ===== */
+
+/* 8. Nuo 768px: .header – eilutė: logotipas kairėje, meniu dešinėje */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1.5rem 2.5rem;
+  }
+
+  /* 9. Nuo 768px: .hero – eilutė, nuotrauka DEŠINĖJE (row-reverse); abi dalys po lygiai pločio, centruotos vertikaliai */
+  .hero {
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 3rem;
+    padding: 1rem 2.5rem 4rem;
+  }
+
+  .hero-img,
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-img {
+    min-width: 0; /* leidžia nuotraukai susiaurėti iki pusės */
+    height: 22rem;
+  }
+
+  /* 10. Nuo 768px: .game-list – eilutė su perkėlimu (wrap), po 2 korteles: flex-basis calc(50% - pusė gap);
+         .tournament – eilutė, centruota vertikaliai, .t-info užima likusią vietą */
+  .games,
+  .tournaments {
+    padding: 0 2.5rem 4rem;
+  }
+
+  .game-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .game-card {
+    flex-basis: calc(50% - 0.75rem);
+  }
+
+  .tournament {
+    flex-direction: row;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .date {
+    width: 6rem;
+  }
+
+  .t-info {
+    flex: 1;
+  }
+}
+
+/* 11. Nuo 1024px: po 3 korteles eilutėje; h1 – 3.5rem */
+@media (min-width: 1024px) {
+  .game-card {
+    flex-basis: calc(33.333% - 1rem);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}

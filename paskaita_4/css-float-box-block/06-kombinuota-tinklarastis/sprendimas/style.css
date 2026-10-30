@@ -1,0 +1,167 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #F2F4F8;
+  color: #1E1E2E;
+}
+
+.page {
+  width: 960px;
+  margin: 0 auto;
+}
+
+/* Antraštė */
+.header {
+  background: #1E1E2E;
+}
+
+.logo {
+  color: #FFFFFF;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nav a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Turinys */
+.content,
+.sidebar {
+  background: #FFFFFF;
+  line-height: 1.5;
+}
+
+.content h1 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.meta {
+  color: #64748B;
+  font-size: 14px;
+}
+
+.tag {
+  background: #CCFBF1;
+  color: #0F766E;
+}
+
+.more {
+  background: #0D9488;
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+/* Šoninė juosta */
+.sidebar h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.categories {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.categories a {
+  color: #1E1E2E;
+  text-decoration: none;
+  border-bottom: 1px solid #E2E8F0;
+}
+
+/* Poraštė */
+.footer {
+  padding: 16px;
+  background: #1E1E2E;
+  color: #CBD5E1;
+  text-align: center;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 1. Antraštė: logotipas kairėje, meniu dešinėje; padding 12px 24px; tamsus fonas turi apgaubti abu plaukiančius vaikus (be fiksuoto aukščio) */
+.header {
+  display: flow-root;
+  padding: 12px 24px;
+  margin-bottom: 24px;
+}
+
+.logo {
+  float: left;
+  margin-top: 5px;
+}
+
+.nav {
+  float: right;
+}
+
+/* 2. Meniu punktai vienoje eilutėje; nuorodos su padding 10px 14px */
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  display: inline-block;
+  padding: 10px 14px;
+}
+
+/* 3. Turinys (.content) kairėje, 640px; šoninė juosta (.sidebar) dešinėje, 290px; abu su padding 24px ir 1px rėmeliu, matomi pločiai nekinta */
+.content,
+.sidebar {
+  box-sizing: border-box;
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+}
+
+.content {
+  float: left;
+  width: 640px;
+}
+
+.sidebar {
+  float: right;
+  width: 290px;
+}
+
+/* 4. Žymos (.tag) su padding 2px 8px; viršelis (.cover) plaukia kairėje teksto viduje, 16px tarpas */
+.tag {
+  display: inline-block;
+  padding: 2px 8px;
+}
+
+.cover {
+  float: left;
+  margin: 0 16px 8px 0;
+}
+
+/* 5. „Skaityti toliau“ (.more) – mygtukas su padding 10px 16px, neužlipantis ant teksto */
+.more {
+  display: inline-block;
+  padding: 10px 16px;
+}
+
+/* 6. Kategorijų nuorodos – per visą juostos plotį, padding 10px 0, paspaudžiama visa eilutė */
+.categories a {
+  display: block;
+  padding: 10px 0;
+}
+
+/* 7. Poraštė po abiem stulpeliais, 24px tarpas */
+.footer {
+  clear: both;
+}
+
+.content,
+.sidebar {
+  margin-bottom: 24px;
+}

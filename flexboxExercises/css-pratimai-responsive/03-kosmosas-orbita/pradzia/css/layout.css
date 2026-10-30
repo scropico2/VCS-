@@ -1,0 +1,33 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.feature img,
+.mission img {
+  width: 100%;
+  height: 16rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.member img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – eilutė: logotipas kairėje, meniu dešinėje, centruoti vertikaliai; .nav su tarpais; .header-cta – PASLĖPTAS telefone */
+
+/* 5. .stats – po 2 rodiklius eilutėje (wrap + calc(50% - pusė gap)); .stat – skaičius virš teksto (stulpelis) */
+
+/* 6. .steps – žingsniai vienas po kito (stulpelis); kiekvienas .step – su akcento linija KAIRĖJE (border-left 3px #22D3EE) */
+
+/* 7. .feature ir .mission – nuotrauka virš teksto (stulpelis); .specs – stulpelis, .spec – pavadinimas kairėje, reikšmė dešinėje;
+    .crew-list – po 2 korteles eilutėje; .member – turinys centruotas */

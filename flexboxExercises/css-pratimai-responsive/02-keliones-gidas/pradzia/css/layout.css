@@ -1,0 +1,97 @@
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+
+.dest-card img {
+  width: 100%;
+  height: 12rem;
+  object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.gallery img {
+  height: 8rem;
+  object-fit: cover;
+}
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 12px;
+}
+.nav {
+  display: flex;
+  gap: 12px;
+  justify-content: space-around;
+  margin: 12px;
+}
+.search {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin: 12px 0px;
+}
+.search input,
+.search button {
+  width: 100%;
+}
+
+/* ===== UŽDUOTYS ===== */
+
+/* 4. .header – stulpelis, turinys centruotas; .nav – nuorodos per visą plotį, tolygiai išdėstytos (space-around) */
+
+/* 5. .search – stulpelis: įvestis virš mygtuko, abu per visą plotį */
+
+/* 6. .filters – visi mygtukai vienoje eilutėje (nowrap), kas netelpa – slenkama į šoną (overflow-x: auto); .chip nesitraukia (flex-shrink: 0) */
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 12px;
+  justify-content: space-between;
+}
+.dest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.dest-body {
+  margin: 12px;
+}
+.dest-meta {
+  display: flex;
+  justify-content: space-between;
+  margin: 12px;
+}
+/* 7. .dest-list – kortelės viena po kitos su tarpais; .dest-meta – trukmė kairėje, kaina dešinėje */
+.content {
+  display: flex;
+  flex-direction: column;
+}
+.facts {
+  order: -1;
+  gap: 12px;
+}
+.fact {
+  display: flex;
+  justify-content: space-between;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.gallery img {
+  flex-basis: calc(50% - 8px);
+  object-fit: cover;
+  min-width: 0;
+  height: 8rem;
+  object-fit: cover;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+/* 8. kryptis.html: .content – stulpelis, .facts rodomas PIRMAS (order); .fact – pavadinimas kairėje, reikšmė dešinėje;
+    .gallery – po 2 nuotraukas eilutėje (wrap + calc(50% - pusė gap)); .footer – stulpeliai vienas po kito */
