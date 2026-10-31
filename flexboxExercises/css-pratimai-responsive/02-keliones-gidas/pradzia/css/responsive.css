@@ -6,8 +6,77 @@
 
 /* 9. Nuo 768px: .header – eilutė (logotipas kairėje, meniu dešinėje, .nav be 100% pločio);
     .search – eilutė, įvestis užima likusią vietą; .filters – perkeliami (wrap) ir centruoti */
+@media (min-width: 768px) {
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .nav {
+    width: auto;
+  }
+  .search {
+    flex-direction: row;
+  }
+
+  .search input {
+    flex: 1;
+    width: auto;
+  }
+  .search button {
+    width: auto;
+  }
+  .filters {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
 /* 10. Nuo 768px: .dest-list – po 2 korteles eilutėje; .footer – trys stulpeliai po lygiai */
+@media (min-width: 768px) {
+  .dest-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .dest-card {
+    flex-basis: calc(50% - 12px);
+  }
+  .footer {
+    flex-direction: row;
+  }
 
+  .footer > * {
+    flex: 1;
+  }
+}
 /* 11. Nuo 1024px: po 3 korteles; .content – eilutė: .article užima likusią vietą, .facts – 20rem pločio DEŠINĖJE;
      .gallery – po 4 nuotraukas; h1 – 3.5rem */
+
+@media (min-width: 1024px) {
+  .dest-card {
+    flex-basis: calc(33.333% - 16px);
+  }
+
+  .content {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .article {
+    flex: 1;
+  }
+
+  .facts {
+    width: 20rem;
+    flex-shrink: 0;
+    order: 0;
+  }
+
+  .gallery img {
+    flex-basis: calc(25% - 12px);
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+}
