@@ -8,6 +8,9 @@
 
 body {
   margin: 0;
+  font-family: "Inter";
+  background-color: #050816;
+  color: #e2e8f0;
 }
 
 img {
@@ -32,8 +35,41 @@ a {
 /* ===== UŽDUOTYS ===== */
 
 /* 1. Tekstui – Inter, antraštėms (h1, h2, h3, .logo, .stat strong, .step-num) – Orbitron; fonas #050816, tekstas #E2E8F0 */
-
+h1,
+h2,
+h3,
+.logo,
+.stat strong,
+.step-num {
+  font-family: "Orbitron";
+}
 /* 2. Akcentas #22D3EE: .logo span, .eyebrow, .stat strong, .step-num, .link;
     antrinis tekstas #94A3B8: .stat span, .step p, .member p, .spec span, .footer */
+.logo span,
+.eyebrow,
+.stat strong,
+.step-num,
+.link {
+  color: #22d3ee;
+}
+.stat span,
+.step p,
+.member p,
+.spec span,
+.footer {
+  color: #94a3b8;
+}
 
 /* 3. .btn – fonas #22D3EE, tekstas #050816; .stat, .step, .member ir .specs – fonas #0F172A, 1px rėmelis #1E293B */
+.btn {
+  background-color: #22d3ee;
+  color: #050816;
+}
+.stat,
+.step,
+.member,
+.spec {
+  background-color: #0f172a;
+  border: solid 1px #1e293b;
+  border-radius: 12px;
+}
