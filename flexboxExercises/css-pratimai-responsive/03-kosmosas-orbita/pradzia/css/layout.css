@@ -94,6 +94,7 @@ img {
   flex-direction: column;
 }
 .spec {
+  gap: 12px;
   display: flex;
   justify-content: space-between;
   padding: 24px;
@@ -112,10 +113,21 @@ img {
   align-items: center;
   text-align: center;
 }
+.member img {
+  padding: 6px;
+}
 .feature {
   padding-bottom: 100px;
+  padding-top: 20px;
 }
 .footer {
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tinmeline {
+  padding-top: 20px;
 }

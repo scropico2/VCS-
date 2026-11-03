@@ -5,8 +5,58 @@
 /* ===== UŽDUOTYS ===== */
 
 /* 8. Nuo 768px: .header-cta – vėl matomas; .nav – per vidurį (tarp logotipo ir mygtuko); .stats – visi 4 vienoje eilutėje; h1 – 3.5rem */
-
+@media (min-width: 768px) {
+  .header-cta {
+    display: block;
+    border-radius: 12px;
+    padding: 6px 12px 6px 12px;
+    box-sizing: border-box;
+  }
+  .stats > * {
+    flex-basis: calc(25% - 12px);
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .feature,
+  .mission {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+  .feature > *,
+  .mission > * {
+    flex: 1;
+    min-width: 0;
+  }
+  .eyebrow {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+}
 /* 9. Nuo 768px: .feature ir .mission – nuotrauka ir tekstas greta, po lygiai pločio, centruoti vertikaliai */
 
 /* 10. Nuo 1024px: .steps – visi 4 žingsniai eilutėje po lygiai, akcento linija VIRŠUJE vietoj kairės;
      .member – po 4 eilutėje */
+
+@media (min-width: 1024px) {
+  .steps {
+    flex-direction: row;
+  }
+  .step {
+    flex: 1;
+    border-left: none;
+    border-top: 3px solid #22d3ee;
+  }
+  .member {
+    flex-basis: calc(25% - 12px);
+  }
+  .eyebrow {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+}
