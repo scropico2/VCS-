@@ -73,3 +73,6 @@ h3,
   border: solid 1px #1e293b;
   border-radius: 12px;
 }
+.hero-text {
+  margin: 12px;
+}
