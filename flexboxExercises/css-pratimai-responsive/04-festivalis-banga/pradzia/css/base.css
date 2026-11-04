@@ -45,6 +45,11 @@ h3,
 .hero-fact strong {
   font-family: "Bebas Neue";
 }
+.logo {
+  color: #e11d48;
+  font-size: 1.75em;
+  padding: 8px 12px;
+}
 /* 2. .btn – fonas #E11D48, tekstas baltas; .price – #E11D48; .time tekstas ir .badge fonas – #7C3AED; .hero h1 – #FACC15 */
 .btn {
   background-color: #e11d48;
@@ -82,4 +87,13 @@ h3,
 .page-head p,
 .footer {
   color: #78716c;
+}
+
+h2 {
+  padding: 8px 12px;
+}
+.badge {
+  border-radius: 12px;
+  width: fit-content;
+  padding: 4px 12px;
 }
