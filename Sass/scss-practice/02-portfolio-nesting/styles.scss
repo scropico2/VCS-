@@ -25,22 +25,37 @@ body {
   &__brand {
     color: white;
     // TODO: font-size 1.5rem, bold, no underline
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
   }
 
   &__list {
     display: flex;
     gap: 1.5rem;
-    list-style: ___;   // remove bullets
+    list-style: none; // remove bullets
     margin: 0;
     padding: 0;
   }
+  &__item {
+    padding: 12px;
+  }
+  &__link {
+    color: $light;
+    text-decoration: none;
+    &:hover {
+      color: $accent;
+    }
 
+    &--active {
+      color: $accent;
+      border-bottom: 2px solid $accent;
+    }
+  }
   // STEP 3: write &__item and &__link yourself
   //   &__link: white, no underline
   //   &__link:hover -> use  &:hover  inside it, colour $accent
   //   &__link--active -> use  &--active  inside it, colour $accent, bottom border
-
-
 }
 
 // STEP 4: nest the project card
@@ -50,6 +65,27 @@ body {
   gap: 1.5rem;
   padding: 2rem;
 
+  .project {
+    flex: 1;
+    background-color: rgb(195, 191, 188);
+    padding: 1.5rem;
+    border-radius: 8px;
+
+    h2 {
+      margin-top: 0;
+    }
+    p {
+      color: #555;
+    }
+    &:hover {
+      transform: translateY(-4px);
+    }
+    &__link {
+      color: #7d2424;
+      text-decoration: none;
+    }
+  }
+
   // TODO: nest .project inside, then nest h2 and p inside .project
   // .project: flex 1, white background, padding 1.5rem, border-radius 8px
   // .project:hover -> lift it up with  transform: translateY(-4px)
@@ -58,6 +94,20 @@ body {
 
 // STEP 5: .about and .contact - centre the text, add padding. Nest an h1 / h2 inside each.
 .about {
+  text-align: center;
+  padding: 2rem 1rem;
+
+  h1 {
+    color: #7d2424;
+  }
+  p {
+    color: #38bdf8;
+  }
 }
 .contact {
+  text-align: center;
+  padding: 2rem 1rem;
+  h2 {
+    color: #7d2424;
+  }
 }
