@@ -1,0 +1,80 @@
+// EXERCISE 01 - VARIABLES
+// Goal: every colour, font and size comes from a variable. No repeated values.
+// Save the file -> Live Sass Compiler creates styles.css
+
+// STEP 1: create these variables (replace the ___ )
+$bg: #f5ebe0; // a cream colour, e.g. #f5ebe0
+$primary: #611c1c; // dark brown
+$accent: rgb(139, 102, 32); // orange / caramel
+$text: rgb(33, 33, 53); // very dark colour
+$font-main: "Georgia", "serif"; // e.g. Georgia, serif
+$radius: 8px; // e.g. 8px
+$gap: 1rem; // e.g. 1rem
+
+// STEP 2: use them
+body {
+  margin: 0;
+  font-family: $font-main;
+  background-color: $bg;
+  color: $text;
+}
+
+// STEP 3: header is a flex row, logo left, nav right
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $gap;
+  background-color: $primary;
+  color: white;
+}
+
+.nav a {
+  color: white;
+  margin-left: $gap;
+  text-decoration: none;
+}
+
+// STEP 4: hero - centre everything in a column
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem $gap;
+  // TODO: background-color using $accent
+  background-color: $accent;
+}
+
+.button {
+  // TODO: background-color $primary, white text, padding $gap, border-radius $radius
+  background-color: $primary;
+  color: #f5ebe0;
+  padding: $gap;
+  border-radius: $radius;
+}
+
+// STEP 5: menu items sit in a row and wrap
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: $gap;
+  padding: $gap;
+}
+.item {
+  // TODO: flex: 1, white background, padding $gap, border-radius $radius
+  flex: 1;
+  background-color: white;
+  padding: $gap;
+  border-radius: $radius;
+}
+
+// STEP 6 (challenge): change ONLY $primary and $accent and watch the whole site re-theme.
+.site-footer {
+  // TODO: centre the text, background $primary, white text, padding $gap
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: $primary;
+  padding: $gap;
+}

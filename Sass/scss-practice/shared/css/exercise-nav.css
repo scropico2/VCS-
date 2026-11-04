@@ -1,0 +1,4 @@
+/* Plain CSS (not SCSS) - the little prev / home / next bar at the bottom of every exercise */
+.exercise-nav{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:1rem 1.5rem;background:#222;font-family:system-ui,sans-serif}
+.exercise-nav a{color:#fff;text-decoration:none;font-weight:600}
+.exercise-nav a:hover{text-decoration:underline}

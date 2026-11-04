@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../shared/css/exercise-nav.css">
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2 class="sidebar__logo">Dash</h2>
+      <a class="sidebar__link" href="#">Overview</a>
+      <a class="sidebar__link" href="#">Users</a>
+      <a class="sidebar__link" href="#">Settings</a>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><h1>Overview</h1><span class="badge badge-success">Online</span></header>
+
+      <section class="stats">
+        <div class="stat"><h3>Users</h3><p>1,240</p></div>
+        <div class="stat"><h3>Sales</h3><p>8,900</p></div>
+        <div class="stat"><h3>Errors</h3><p>12</p></div>
+        <div class="stat"><h3>Uptime</h3><p>99%</p></div>
+      </section>
+
+      <section class="panel">
+        <h2>Recent activity</h2>
+        <p><span class="badge badge-success">Done</span> Deployed v1.2</p>
+        <p><span class="badge badge-warning">Pending</span> Review pull request</p>
+        <p><span class="badge badge-danger">Failed</span> Backup job</p>
+      </section>
+    </main>
+  </div>
+
+  <footer class="exercise-nav">
+    <a href="../03-blog-mixins/index.html">← Prev: Blog</a>
+    <a href="../index.html">🏠 Hub</a>
+    <span></span>
+  </footer>
+</body>
+</html>

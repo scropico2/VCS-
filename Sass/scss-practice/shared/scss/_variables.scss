@@ -1,0 +1,17 @@
+// Shared variables - used by exercise 04 (and any site you build later)
+$primary:   #4f46e5;
+$success:   #16a34a;
+$warning:   #f59e0b;
+$danger:    #dc2626;
+$bg:        #f3f4f6;
+$text:      #1f2937;
+$white:     #ffffff;
+
+$spacing:   1rem;
+$radius:    8px;
+$font-stack: system-ui, -apple-system, "Segoe UI", sans-serif;
+
+$breakpoints: (
+  "tablet": 768px,
+  "mobile": 480px
+);

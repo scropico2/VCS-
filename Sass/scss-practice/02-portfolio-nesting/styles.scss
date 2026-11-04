@@ -1,0 +1,63 @@
+// EXERCISE 02 - NESTING and the & symbol
+// Rule: you may NOT write the same class name twice at the start of a selector.
+// Plain CSS:   .navbar {}  .navbar__list {}  .navbar__list li {}
+// SCSS:        .navbar { &__list { li { ... } } }
+
+$dark: #111827;
+$light: #f9fafb;
+$accent: #38bdf8;
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: $light;
+}
+
+// STEP 1: navbar - flex row, space between
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: $dark;
+
+  // STEP 2: &__brand means .navbar__brand
+  &__brand {
+    color: white;
+    // TODO: font-size 1.5rem, bold, no underline
+  }
+
+  &__list {
+    display: flex;
+    gap: 1.5rem;
+    list-style: ___;   // remove bullets
+    margin: 0;
+    padding: 0;
+  }
+
+  // STEP 3: write &__item and &__link yourself
+  //   &__link: white, no underline
+  //   &__link:hover -> use  &:hover  inside it, colour $accent
+  //   &__link--active -> use  &--active  inside it, colour $accent, bottom border
+
+
+}
+
+// STEP 4: nest the project card
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+
+  // TODO: nest .project inside, then nest h2 and p inside .project
+  // .project: flex 1, white background, padding 1.5rem, border-radius 8px
+  // .project:hover -> lift it up with  transform: translateY(-4px)
+  // &__link inside .project is tricky: it is .project__link, so write it as  &__link
+}
+
+// STEP 5: .about and .contact - centre the text, add padding. Nest an h1 / h2 inside each.
+.about {
+}
+.contact {
+}

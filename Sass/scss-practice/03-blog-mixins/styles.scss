@@ -1,0 +1,52 @@
+// EXERCISE 03 - PARTIALS and MIXINS
+@use "mixins";
+
+$primary: #6366f1;
+$secondary: #64748b;
+$danger: #ef4444;
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f1f5f9;
+}
+
+// Finish _mixins.scss first, then come back here.
+
+.header {
+  @include mixins.flex-between;
+  padding: 1rem 2rem;
+  background: #0f172a;
+  color: white;
+}
+
+// STEP 6: the buttons. One base class + three colour variants.
+.btn {
+  // TODO: font-size 1rem
+  &--primary   { @include mixins.button-color($primary); }
+  // TODO: &--secondary using $secondary
+  // TODO: &--danger using $danger
+}
+
+// STEP 7: cards in a wrapping flex row
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.card {
+  @include mixins.card;       // uses the defaults
+  flex: 1 1 220px;
+  // TODO: make a second look by writing  @include mixins.card($bg: #e0e7ff, $padding: 2rem);  on the 2nd card only (nth-child(2))
+}
+
+// STEP 8 (challenge): on small screens stack the header and the cards in a column
+.header {
+  @include mixins.mobile {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+// TODO: do the same for .posts
