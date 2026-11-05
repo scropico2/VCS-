@@ -1,0 +1,307 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  background-color: #050816;
+  color: #e2e8f0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Orbitron", sans-serif;
+}
+
+.logo {
+  font-family: "Orbitron", sans-serif;
+  font-size: 2.2rem;
+}
+.logo span {
+  color: #22d3ee;
+}
+
+.hero {
+  background-image: linear-gradient(rgba(5, 8, 22, 0.6), #050816), url("https://images.unsplash.com/photo-1462331940025-496dfbfc7564?w=1600&q=80");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-text {
+  margin: 12px;
+}
+
+.eyebrow,
+.link {
+  color: #22d3ee;
+}
+
+.btn {
+  background-color: #22d3ee;
+  color: #050816;
+}
+
+.stat,
+.step,
+.member,
+.spec {
+  background-color: #0f172a;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+}
+
+.stat strong {
+  font-family: "Orbitron", sans-serif;
+  color: #22d3ee;
+}
+.stat span {
+  color: #94a3b8;
+}
+
+.step p {
+  color: #94a3b8;
+}
+
+.step-num {
+  font-family: "Orbitron", sans-serif;
+  color: #22d3ee;
+}
+
+.member p {
+  color: #94a3b8;
+}
+
+.spec span {
+  color: #94a3b8;
+}
+
+.footer {
+  color: #94a3b8;
+}
+
+/* layout.css – maketas MAŽAM ekranui (mobile first).
+   Čia rašote flexbox taisykles telefonui; media užklausų čia nėra. */
+.feature img,
+.mission img {
+  width: 100%;
+  height: 16rem;
+  -o-object-fit: cover;
+     object-fit: cover; /* nuotrauka užpildo plotą neiškraipydama proporcijų */
+}
+
+.member img {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== UŽDUOTYS ===== */
+/* 4. .header – eilutė: logotipas kairėje, meniu dešinėje, centruoti vertikaliai; .nav su tarpais; .header-cta – PASLĖPTAS telefone */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+}
+
+.nav {
+  display: flex;
+  gap: 16px;
+}
+
+.header-cta {
+  display: none;
+}
+
+/* 5. .stats – po 2 rodiklius eilutėje (wrap + calc(50% - pusė gap)); .stat – skaičius virš teksto (stulpelis) */
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 12px;
+}
+
+.stats > * {
+  flex-basis: calc(50% - 8px);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 12px;
+}
+
+/* 6. .steps – žingsniai vienas po kito (stulpelis); kiekvienas .step – su akcento linija KAIRĖJE (border-left 3px #22D3EE) */
+.steps {
+  display: flex;
+  flex-direction: column;
+  margin: 12px;
+}
+
+h2 {
+  margin: 12px;
+}
+
+h1 {
+  margin: 12px;
+}
+
+.link {
+  margin: 12px;
+}
+
+.step {
+  border-left: 3px solid #22d3ee;
+  padding: 12px;
+}
+
+/* 7. .feature ir .mission – nuotrauka virš teksto (stulpelis); .specs – stulpelis, .spec – pavadinimas kairėje, reikšmė dešinėje;
+    .crew-list – po 2 korteles eilutėje; .member – turinys centruotas */
+img {
+  border-radius: 16em;
+}
+
+.feature,
+.mission {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.eyebrow {
+  margin: 12px;
+}
+
+.feature p {
+  margin: 12px;
+}
+
+.specs {
+  display: flex;
+  flex-direction: column;
+}
+
+.spec {
+  gap: 12px;
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.crew-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 12px;
+}
+
+.member {
+  flex-basis: calc(50% - 8px);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.member img {
+  padding: 6px;
+}
+
+.feature {
+  padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+.footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 24px 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tinmeline {
+  padding-top: 20px;
+}
+
+/* responsive.css – tik media užklausos.
+   Mobile first: rašome min-width ir keičiame tik tai, kas didesniame ekrane kitaip.
+   Breakpoint'ai: 768px (planšetė) ir 1024px (kompiuteris). */
+/* ===== UŽDUOTYS ===== */
+/* 8. Nuo 768px: .header-cta – vėl matomas; .nav – per vidurį (tarp logotipo ir mygtuko); .stats – visi 4 vienoje eilutėje; h1 – 3.5rem */
+@media (min-width: 768px) {
+  .header-cta {
+    display: block;
+    border-radius: 12px;
+    padding: 6px 12px 6px 12px;
+    box-sizing: border-box;
+  }
+  .stats > * {
+    flex-basis: calc(25% - 12px);
+  }
+  h1 {
+    font-size: 3.5rem;
+  }
+  .feature,
+  .mission {
+    flex-direction: row;
+    align-items: center;
+    gap: 24px;
+  }
+  .feature > *,
+  .mission > * {
+    flex: 1;
+    min-width: 0;
+  }
+  .eyebrow {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+}
+/* 9. Nuo 768px: .feature ir .mission – nuotrauka ir tekstas greta, po lygiai pločio, centruoti vertikaliai */
+/* 10. Nuo 1024px: .steps – visi 4 žingsniai eilutėje po lygiai, akcento linija VIRŠUJE vietoj kairės;
+     .member – po 4 eilutėje */
+@media (min-width: 1024px) {
+  .steps {
+    flex-direction: row;
+  }
+  .step {
+    flex: 1;
+    border-left: none;
+    border-top: 3px solid #22d3ee;
+  }
+  .member {
+    flex-basis: calc(25% - 12px);
+  }
+  .eyebrow {
+    margin: 0;
+  }
+  h1 {
+    margin: 0;
+  }
+}/*# sourceMappingURL=main.css.map */
