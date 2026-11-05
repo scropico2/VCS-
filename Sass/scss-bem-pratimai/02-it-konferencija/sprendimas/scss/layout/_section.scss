@@ -1,0 +1,16 @@
+@use '../abstracts/variables' as v;
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 72px 24px;
+
+  &__title {
+    font-size: 40px;
+  }
+
+  &__text {
+    margin: 8px 0 40px;
+    color: v.$muted;
+  }
+}

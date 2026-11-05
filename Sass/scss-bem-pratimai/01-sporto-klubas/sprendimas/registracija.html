@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registracija – Pulsas</title>
+  <!-- 1. CSS reset iš CDN – visada PIRMAS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css">
+  <!-- 2. Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap">
+  <!-- 3. Mūsų sukompiliuotas CSS – PASKUTINIS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="header__logo" href="index.html">
+      <img class="header__logo-img" src="img/logo.svg" alt="">
+      Pulsas
+    </a>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Pradžia</a>
+      <a class="nav__link" href="tvarkarastis.html">Tvarkaraštis</a>
+      <a class="nav__link nav__link--active" href="registracija.html">Registracija</a>
+    </nav>
+  </header>
+
+  <main class="section signup">
+    <div class="signup__info">
+      <h1 class="section__title">Registracija į treniruotę</h1>
+      <p class="section__text">Užpildyk formą ir mes patvirtinsime vietą el. paštu per 24 valandas.</p>
+      <ul class="benefits">
+        <li class="benefits__item">Pirmoji treniruotė – nemokamai</li>
+        <li class="benefits__item">Narystę galima sustabdyti bet kada</li>
+        <li class="benefits__item">Rankšluosčiai ir spintelės įskaičiuoti</li>
+      </ul>
+    </div>
+
+    <form class="form" action="#">
+      <div class="form__group">
+        <label class="form__label" for="name">Vardas ir pavardė</label>
+        <input class="form__input" type="text" id="name" placeholder="Jonas Jonaitis" required>
+      </div>
+      <div class="form__row">
+        <div class="form__group">
+          <label class="form__label" for="email">El. paštas</label>
+          <input class="form__input" type="email" id="email" placeholder="jonas@pastas.lt" required>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="phone">Telefonas</label>
+          <input class="form__input" type="tel" id="phone" placeholder="+370 600 00000">
+        </div>
+      </div>
+      <div class="form__group">
+        <label class="form__label" for="workout">Treniruotė</label>
+        <select class="form__input" id="workout">
+          <option>Joga</option>
+          <option>Jėgos treniruotė</option>
+          <option>Kardio intervalai</option>
+          <option>Spiningas</option>
+        </select>
+      </div>
+      <fieldset class="form__group">
+        <legend class="form__label">Narystė</legend>
+        <div class="form__options">
+          <label class="form__option"><input type="radio" name="plan" checked> Vienkartinė – 8 €</label>
+          <label class="form__option"><input type="radio" name="plan"> Mėnesio – 39 €</label>
+          <label class="form__option"><input type="radio" name="plan"> Metinė – 349 €</label>
+        </div>
+      </fieldset>
+      <div class="form__group">
+        <label class="form__label" for="comment">Komentaras</label>
+        <textarea class="form__input form__input--textarea" id="comment" rows="3" placeholder="Traumos, tikslai ar klausimai treneriui"></textarea>
+      </div>
+      <label class="form__option"><input type="checkbox" required> Sutinku su klubo taisyklėmis</label>
+      <button class="btn btn--primary btn--full" type="submit">Registruotis</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <p class="footer__text">© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12</p>
+    <nav class="footer__nav">
+      <a class="footer__link" href="index.html">Pradžia</a>
+      <a class="footer__link" href="tvarkarastis.html">Tvarkaraštis</a>
+      <a class="footer__link" href="registracija.html">Registracija</a>
+    </nav>
+  </footer>
+</body>
+</html>

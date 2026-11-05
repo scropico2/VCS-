@@ -1,0 +1,23 @@
+// style.scss – tik tvarka, jokių stilių.
+// abstracts/ čia nejungiami: jie CSS nesukuria.
+
+// 1. Bendri elementai
+@use 'base/base';
+@use 'base/animations';
+
+// 2. Puslapio dalys
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/section';
+@use 'layout/signup';
+@use 'layout/footer';
+
+// 3. Komponentai
+@use 'components/btn';
+@use 'components/badge';
+@use 'components/card';
+@use 'components/tag';
+@use 'components/schedule';
+@use 'components/cta';
+@use 'components/benefits';
+@use 'components/form';

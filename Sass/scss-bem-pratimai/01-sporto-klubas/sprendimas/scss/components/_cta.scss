@@ -1,0 +1,18 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.cta {
+  @include m.flex-row(24px);
+  justify-content: space-between;
+  margin-top: 32px;
+  padding: 24px 32px;
+  border-radius: v.$radius;
+  background: rgba(v.$primary, 0.1);
+
+  &__text {
+    font-family: v.$font-heading;
+    font-size: 22px;
+    font-weight: 700;
+    color: v.$dark;
+  }
+}

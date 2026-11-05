@@ -1,0 +1,46 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.schedule {
+  @include m.surface;
+  overflow-x: auto; // siaurame ekrane lentelę galima slinkti į šoną
+
+  &__table {
+    width: 100%;
+    min-width: 720px;
+  }
+
+  &__head {
+    background: v.$dark;
+    color: v.$surface;
+  }
+
+  &__th {
+    padding: 16px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  &__row {
+    border-bottom: 1px solid v.$border;
+    transition: background v.$speed;
+
+    &:nth-child(even) {
+      background: v.$bg;
+    }
+
+    &:hover {
+      background: rgba(v.$primary, 0.08);
+    }
+  }
+
+  &__cell {
+    padding: 14px 20px;
+
+    &--time {
+      font-weight: 600;
+      color: v.$primary;
+    }
+  }
+}

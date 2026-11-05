@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as v;
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: v.$font-body;
+  line-height: 1.6;
+  color: v.$text;
+  background: v.$bg;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: v.$font-heading;
+  font-weight: 700;
+  line-height: 1.15;
+}

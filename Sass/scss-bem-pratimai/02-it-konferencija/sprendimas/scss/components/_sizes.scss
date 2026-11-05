@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as v;
+
+// Radio mygtukai, atrodantys kaip „piliulės“
+.sizes {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px; // legend nėra flex elementas, todėl gap jam negalioja
+
+  &__input {
+    position: absolute;
+    opacity: 0; // paslepiame, bet paliekame veikiantį
+  }
+
+  &__label {
+    display: grid;
+    place-items: center;
+    width: 48px;
+    height: 46px;
+    border: 1px solid v.$border;
+    border-radius: v.$radius-sm;
+    background: v.$bg;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all v.$speed;
+
+    &:hover {
+      border-color: v.$accent;
+    }
+  }
+
+  // Pažymėtas input → jo kaimynas span
+  &__input:checked + &__label {
+    border-color: v.$primary;
+    background: v.$primary;
+    color: #FFFFFF;
+  }
+
+  &__input:focus-visible + &__label {
+    box-shadow: 0 0 0 4px rgba(v.$primary, 0.35);
+  }
+}

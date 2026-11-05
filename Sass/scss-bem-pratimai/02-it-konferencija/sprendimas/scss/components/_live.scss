@@ -1,0 +1,36 @@
+@use '../abstracts/variables' as v;
+
+.live {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 16px;
+  border: 1px solid rgba(v.$accent, 0.4);
+  border-radius: 999px;
+  background: rgba(v.$accent, 0.1);
+  color: v.$accent;
+  font-size: 14px;
+  font-weight: 600;
+
+  // Taškas + pulsuojantis žiedas (du pseudo-elementai)
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: v.$accent;
+    box-shadow: 0 0 0 0 v.$accent;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    left: 16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: v.$accent;
+    animation: ping 1.5s ease-out infinite;
+  }
+}

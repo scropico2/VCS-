@@ -1,0 +1,10 @@
+.signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+
+  &__info {
+    flex: 1 1 320px;
+  }
+}

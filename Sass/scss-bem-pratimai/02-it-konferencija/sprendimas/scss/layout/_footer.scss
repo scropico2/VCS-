@@ -1,0 +1,37 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 40px 24px;
+  border-top: 1px solid v.$border;
+  background: v.$surface;
+
+  @include m.respond(v.$tablet) {
+    padding: 40px 48px;
+  }
+
+  &__text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: v.$muted;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__link {
+    color: v.$muted;
+    transition: color v.$speed;
+
+    &:hover {
+      color: v.$accent;
+    }
+  }
+}

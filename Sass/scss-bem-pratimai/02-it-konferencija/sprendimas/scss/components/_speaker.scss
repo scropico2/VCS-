@@ -1,0 +1,53 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.speakers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.speaker {
+  @include m.panel(0);
+  @include m.hover-glow;
+  flex: 1 1 220px;
+  overflow: hidden;
+  animation: fade-up 0.7s ease-out both;
+
+  // @for: kiekviena kita kortelė atsiranda 0.15s vėliau
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) {
+      animation-delay: $i * 0.15s;
+    }
+  }
+
+  &__photo {
+    overflow: hidden; // priartinta nuotrauka neišlenda už ribų
+    aspect-ratio: 1;
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  &:hover &__img {
+    transform: scale(1.08);
+  }
+
+  &__body {
+    padding: 20px;
+  }
+
+  &__name {
+    margin: 12px 0 4px;
+    font-size: 20px;
+  }
+
+  &__role {
+    font-size: 14px;
+    color: v.$muted;
+  }
+}

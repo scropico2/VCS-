@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kodas 2027 – frontend konferencija</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img class="logo__img" src="img/logo.svg" alt="">
+      <span class="logo__text">kodas<span class="logo__accent">2027</span></span>
+    </a>
+    <nav class="nav">
+      <a class="nav__link nav__link--active" href="index.html">Pradžia</a>
+      <a class="nav__link" href="programa.html">Programa</a>
+      <a class="nav__link" href="bilietai.html">Bilietai</a>
+    </nav>
+    <a class="btn btn--primary btn--small" href="bilietai.html">Pirkti bilietą</a>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="live">Registracija atvira</span>
+      <h1 class="hero__title">Frontend konferencija <span class="hero__highlight">Vilniuje</span></h1>
+      <p class="hero__text">Dvi dienos, trys sekcijos ir 20 pranešimų apie HTML, CSS ir JavaScript.</p>
+      <p class="hero__date">2027 m. kovo 18–19 d. · LITEXPO, Vilnius</p>
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="bilietai.html">Pirkti bilietą <span class="btn__arrow">→</span></a>
+        <a class="btn btn--ghost" href="programa.html">Žiūrėti programą</a>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="stats__item">
+        <span class="stats__number">20</span>
+        <span class="stats__label">pranešimų</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">3</span>
+        <span class="stats__label">sekcijos</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">600+</span>
+        <span class="stats__label">dalyvių</span>
+      </div>
+      <div class="stats__item">
+        <span class="stats__number">2</span>
+        <span class="stats__label">dienos</span>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section__title">Pranešėjai</h2>
+      <p class="section__text">Praktikai iš Lietuvos ir užsienio produktų komandų.</p>
+
+      <div class="speakers">
+        <article class="speaker">
+          <div class="speaker__photo">
+            <img class="speaker__img" src="img/pranesejas-1.svg" alt="Lukas Mažeika">
+          </div>
+          <div class="speaker__body">
+            <span class="tag tag--frontend">Frontend</span>
+            <h3 class="speaker__name">Lukas Mažeika</h3>
+            <p class="speaker__role">CSS architektas, „Pikselis“</p>
+          </div>
+        </article>
+        <article class="speaker">
+          <div class="speaker__photo">
+            <img class="speaker__img" src="img/pranesejas-2.svg" alt="Eglė Stankevičiūtė">
+          </div>
+          <div class="speaker__body">
+            <span class="tag tag--design">Dizainas</span>
+            <h3 class="speaker__name">Eglė Stankevičiūtė</h3>
+            <p class="speaker__role">UX dizainerė, „Banga Labs“</p>
+          </div>
+        </article>
+        <article class="speaker">
+          <div class="speaker__photo">
+            <img class="speaker__img" src="img/pranesejas-3.svg" alt="Rūta Kairytė">
+          </div>
+          <div class="speaker__body">
+            <span class="tag tag--frontend">Frontend</span>
+            <h3 class="speaker__name">Rūta Kairytė</h3>
+            <p class="speaker__role">JavaScript programuotoja, „Kodo kalvė“</p>
+          </div>
+        </article>
+        <article class="speaker">
+          <div class="speaker__photo">
+            <img class="speaker__img" src="img/pranesejas-4.svg" alt="Andrius Vasiliauskas">
+          </div>
+          <div class="speaker__body">
+            <span class="tag tag--backend">Backend</span>
+            <h3 class="speaker__name">Andrius Vasiliauskas</h3>
+            <p class="speaker__role">API inžinierius, „Debesis“</p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" alt="">
+        <span class="logo__text">kodas<span class="logo__accent">2027</span></span>
+      </a>
+      <p class="footer__text">Frontend konferencija · 2027 m. kovo 18–19 d. · Vilnius</p>
+    </div>
+    <nav class="footer__nav">
+      <a class="footer__link" href="index.html">Pradžia</a>
+      <a class="footer__link" href="programa.html">Programa</a>
+      <a class="footer__link" href="bilietai.html">Bilietai</a>
+    </nav>
+  </footer>
+</body>
+</html>

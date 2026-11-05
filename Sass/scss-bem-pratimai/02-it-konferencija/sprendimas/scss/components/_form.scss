@@ -1,0 +1,74 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.form {
+  @include m.panel(32px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  &__title {
+    font-size: 28px;
+  }
+
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    > * {
+      flex: 1 1 240px;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    color: v.$muted;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid v.$border;
+    border-radius: v.$radius-sm;
+    background: v.$bg;
+    transition: border-color v.$speed, box-shadow v.$speed;
+
+    &::placeholder {
+      color: rgba(v.$muted, 0.7);
+    }
+
+    &:focus {
+      @include m.focus-ring;
+    }
+
+    // Raudonas rėmelis tik tada, kai vartotojas jau kažką įvedė ir tai neteisinga
+    &:not(:placeholder-shown):invalid {
+      @include m.focus-ring(#FF5C7A);
+    }
+  }
+
+  &__check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+
+    input {
+      width: 18px;
+      height: 18px;
+      accent-color: v.$primary;
+    }
+  }
+
+  .btn {
+    align-self: flex-start;
+  }
+}
