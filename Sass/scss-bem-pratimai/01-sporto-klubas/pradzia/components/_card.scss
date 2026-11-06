@@ -1,0 +1,59 @@
+@use "../abstracts/variables" as v;
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  position: relative;
+  padding: 1.5rem;
+  background-color: v.$surface;
+  border-radius: v.$radius;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition:
+    transform 0.25s,
+    box-shadow 0.25s;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+
+    .card__icon {
+      transform: scale(1.2) rotate(8deg);
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    transition: transform 0.25s;
+  }
+
+  &__title {
+    margin-bottom: 0.5rem;
+    color: v.$text;
+  }
+
+  &__text {
+    color: v.$muted;
+  }
+
+  &__meta {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: v.$muted;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+
+  &--featured {
+    border: 2px solid v.$primary;
+  }
+}

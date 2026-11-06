@@ -1,0 +1,40 @@
+@use "../abstracts/variables" as v;
+
+.schedule {
+  &__table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  &__head {
+    background-color: v.$primary;
+    color: v.$dark;
+  }
+
+  &__th {
+    padding: 0.75rem 1rem;
+    text-align: left;
+  }
+
+  &__row {
+    transition: background-color 0.2s;
+
+    &:nth-child(even) {
+      background-color: v.$surface;
+    }
+
+    &:hover {
+      background-color: rgba(255, 122, 0, 0.15);
+    }
+  }
+
+  &__cell {
+    padding: 0.75rem 1rem;
+    color: v.$text;
+
+    &--time {
+      font-weight: 700;
+      color: v.$primary;
+    }
+  }
+}

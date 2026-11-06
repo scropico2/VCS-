@@ -1,30 +1,151 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tvarkaraštis – Pulsas</title>
-  <!-- 1. CSS reset iš CDN (nuoroda – UZDUOTIS.md) -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tvarkaraštis – Pulsas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css" />
+    <!-- 2. Google Fonts: Montserrat (700, 800) ir Inter (400, 500, 600) -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" />
 
-  <!-- 2. Google Fonts: Montserrat (700, 800) ir Inter (400, 500, 600) -->
-
-  <!-- 3. Sukompiliuotas css/style.css (ne .scss!) -->
-
-</head>
-<body>
-  <!-- header blokas: logotipas (img/logo.svg + „Pulsas“) ir nav blokas su 3 nuorodomis:
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- header blokas: logotipas (img/logo.svg + „Pulsas“) ir nav blokas su 3 nuorodomis:
        Pradžia → index.html, Tvarkaraštis → tvarkarastis.html, Registracija → registracija.html.
        Aktyvaus puslapio nuoroda gauna modifikatorių --active -->
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img
+          class="header__logo-img"
+          src="img/logo.svg"
+          alt="Pulsas sporto klubas" />
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Pradžia</a>
+        <a href="tvarkarastis.html" class="nav__link nav__link--active"
+          >Tvarkaraštis</a
+        >
+        <a href="registracija.html" class="nav__link">Registracija</a>
+      </nav>
+    </header>
+    <main>
+      <!-- h1 „Savaitės tvarkaraštis“ ir tekstas -->
+      <section class="section">
+        <h1 class="section__title">Savaitės tvarkaraštis</h1>
+        <p class="section__text">
+          Vietų skaičius ribotas – registruokis iš anksto.
+        </p>
+        <table class="schedule__table">
+          <thead class="schedule__head">
+            <tr>
+              <th class="schedule__th">Diena</th>
+              <th class="schedule__th">Laikas</th>
+              <th class="schedule__th">Treniruotė</th>
+              <th class="schedule__th">Treneris</th>
+              <th class="schedule__th">Lygis</th>
+              <th class="schedule__th">Vietos</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Pirmadienis</td>
+              <td class="schedule__cell schedule__cell--time">06:30</td>
+              <td class="schedule__cell">Joga</td>
+              <td class="schedule__cell">Ieva Petraitė</td>
+              <td class="schedule__cell">
+                <span class="tag tag--easy">Lengva</span>
+              </td>
+              <td class="schedule__cell">8 / 15</td>
+            </tr>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Pirmadienis</td>
+              <td class="schedule__cell schedule__cell--time">18:00</td>
+              <td class="schedule__cell">Kardio intervalai</td>
+              <td class="schedule__cell">Tomas Kazlauskas</td>
+              <td class="schedule__cell">
+                <span class="tag tag--hard">Sunki</span>
+              </td>
+              <td class="schedule__cell">12 / 20</td>
+            </tr>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Antradienis</td>
+              <td class="schedule__cell schedule__cell--time">19:00</td>
+              <td class="schedule__cell">Jėgos treniruotė</td>
+              <td class="schedule__cell">Marius Jonaitis</td>
+              <td class="schedule__cell">
+                <span class="tag tag--medium">Vidutinė</span>
+              </td>
+              <td class="schedule__cell">5 / 12</td>
+            </tr>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Trečiadienis</td>
+              <td class="schedule__cell schedule__cell--time">07:00</td>
+              <td class="schedule__cell">Spiningas</td>
+              <td class="schedule__cell">Greta Vaitkutė</td>
+              <td class="schedule__cell">
+                <span class="tag tag--medium">Vidutinė</span>
+              </td>
+              <td class="schedule__cell">15 / 18</td>
+            </tr>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Ketvirtadienis</td>
+              <td class="schedule__cell schedule__cell--time">18:30</td>
+              <td class="schedule__cell">Joga</td>
+              <td class="schedule__cell">Ieva Petraitė</td>
+              <td class="schedule__cell">
+                <span class="tag tag--easy">Lengva</span>
+              </td>
+              <td class="schedule__cell">10 / 15</td>
+            </tr>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Penktadienis</td>
+              <td class="schedule__cell schedule__cell--time">17:30</td>
+              <td class="schedule__cell">Kardio intervalai</td>
+              <td class="schedule__cell">Tomas Kazlauskas</td>
+              <td class="schedule__cell">
+                <span class="tag tag--hard">Sunki</span>
+              </td>
+              <td class="schedule__cell">20 / 20</td>
+            </tr>
+            <tr class="schedule__row">
+              <td class="schedule__cell">Šeštadienis</td>
+              <td class="schedule__cell schedule__cell--time">10:00</td>
+              <td class="schedule__cell">Jėgos treniruotė</td>
+              <td class="schedule__cell">Marius Jonaitis</td>
+              <td class="schedule__cell">
+                <span class="tag tag--medium">Vidutinė</span>
+              </td>
+              <td class="schedule__cell">3 / 12</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="cta">
+        <h2 class="section__title">Radai tinkamą laiką?</h2>
+        <p class="cta__text">Užsiregistruok ir užsitikrink savo vietą.</p>
+        <a href="registracija.html" class="btn btn--primary">Registruotis</a>
+      </section>
 
-  <main>
-    <!-- h1 „Savaitės tvarkaraštis“ ir tekstas -->
-
-    <!-- schedule blokas: <table> su <thead> ir <tbody>, 6 stulpeliai, 7 eilutės.
+      <!-- schedule blokas: <table> su <thead> ir <tbody>, 6 stulpeliai, 7 eilutės.
          Lygis rodomas tag bloku: tag--easy, tag--medium, tag--hard -->
 
-    <!-- cta blokas: „Radai tinkamą laiką?“ + mygtukas į registracija.html -->
-  </main>
-
-  <!-- footer blokas: tekstas „© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12“ ir tos pačios 3 nuorodos -->
-</body>
+      <!-- cta blokas: „Radai tinkamą laiką?“ + mygtukas į registracija.html -->
+    </main>
+    <footer class="footer">
+      <p class="footer__text">
+        © 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12
+      </p>
+      <nav class="footer__nav">
+        <a href="index.html" class="footer__link">Pradžia</a>
+        <a href="tvarkarastis.html" class="footer__link">Tvarkaraštis</a>
+        <a href="registracija.html" class="footer__link">Registracija</a>
+      </nav>
+    </footer>
+    <!-- footer blokas: tekstas „© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12“ ir tos pačios 3 nuorodos -->
+  </body>
 </html>

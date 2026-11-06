@@ -1,0 +1,12 @@
+@use "../abstracts/variables" as v;
+
+.cta {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: v.$surface;
+
+  &__text {
+    margin-bottom: 1.5rem;
+    color: v.$muted;
+  }
+}

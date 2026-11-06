@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.header {
+  @include m.flex-row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 16px 48px;
+  background: v.$surface;
+  box-shadow: v.$shadow;
+
+  &__logo {
+    @include m.flex-row(10px);
+    font-family: v.$font-heading;
+    font-size: 22px;
+    font-weight: 800;
+    color: v.$dark;
+  }
+
+  &__logo-img {
+    width: 36px;
+  }
+}
+
+.nav {
+  @include m.flex-row(8px);
+
+  &__link {
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-weight: 500;
+    color: v.$muted;
+    transition:
+      background v.$speed,
+      color v.$speed;
+
+    &:hover {
+      color: v.$primary;
+      background: rgba(v.$primary, 0.08);
+    }
+
+    &--active {
+      color: v.$surface;
+      background: v.$primary;
+
+      &:hover {
+        color: v.$surface;
+        background: v.$primary-dark;
+      }
+    }
+  }
+}
