@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.footer {
+  @include m.flex-row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 12px 24px;
+  background-color: rgba(v.$color-dark, 0.8);
+  color: rgba(v.$color-surface, 0.7);
+  font-size: 14px;
+
+  &__nav {
+    @include m.flex-row(24px);
+  }
+
+  &__link {
+    transition: color v.$speed;
+
+    &:hover {
+      color: v.$color-primary;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  // Viena @each eilutė sukuria .tag--frontend, .tag--design, .tag--backend
+  @each $name, $color in v.$tracks {
+    &--#{$name} {
+      @include m.tinted($color);
+    }
+  }
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}

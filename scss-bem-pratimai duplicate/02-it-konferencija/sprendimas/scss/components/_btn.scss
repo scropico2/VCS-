@@ -1,0 +1,48 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border: 1px solid transparent;
+  border-radius: v.$radius-sm;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background v.$speed, box-shadow v.$speed, transform v.$speed, border-color v.$speed;
+
+  &__arrow {
+    transition: transform v.$speed ease;
+  }
+
+  // Rodyklė pasislenka į dešinę
+  &:hover &__arrow {
+    transform: translateX(6px);
+  }
+
+  &--primary {
+    background: v.$primary;
+    color: #FFFFFF;
+
+    &:hover {
+      background: m.lighter(v.$primary, 6%);
+      box-shadow: 0 10px 30px rgba(v.$primary, 0.5);
+    }
+  }
+
+  &--ghost {
+    border-color: v.$border;
+    background: rgba(v.$surface, 0.6);
+
+    &:hover {
+      border-color: v.$accent;
+      color: v.$accent;
+    }
+  }
+
+  &--small {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,24 @@
+@use '../abstracts/variables' as v;
+
+.tag {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+
+  &--easy {
+    color: v.$easy;
+    background: rgba(v.$easy, 0.12);
+  }
+
+  &--medium {
+    color: v.$medium;
+    background: rgba(v.$medium, 0.12);
+  }
+
+  &--hard {
+    color: v.$hard;
+    background: rgba(v.$hard, 0.12);
+  }
+}

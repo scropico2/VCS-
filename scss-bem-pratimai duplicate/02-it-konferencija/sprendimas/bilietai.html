@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bilietai – Kodas 2027</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img class="logo__img" src="img/logo.svg" alt="">
+      <span class="logo__text">kodas<span class="logo__accent">2027</span></span>
+    </a>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Pradžia</a>
+      <a class="nav__link" href="programa.html">Programa</a>
+      <a class="nav__link nav__link--active" href="bilietai.html">Bilietai</a>
+    </nav>
+    <a class="btn btn--primary btn--small" href="bilietai.html">Pirkti bilietą</a>
+  </header>
+
+  <main class="section">
+    <h1 class="section__title">Bilietai</h1>
+    <p class="section__text">Kaina galioja iki vasario 1 d. Visi bilietai – abiem dienoms.</p>
+
+    <div class="tickets">
+      <article class="ticket">
+        <h2 class="ticket__name">Studento</h2>
+        <p class="ticket__price">29 €</p>
+        <ul class="ticket__list">
+          <li class="ticket__item">Visi pranešimai</li>
+          <li class="ticket__item">Kava ir pietūs</li>
+          <li class="ticket__item ticket__item--off">Seminarai</li>
+        </ul>
+      </article>
+      <article class="ticket ticket--featured">
+        <span class="ticket__badge">Populiariausias</span>
+        <h2 class="ticket__name">Standartinis</h2>
+        <p class="ticket__price">89 €</p>
+        <ul class="ticket__list">
+          <li class="ticket__item">Visi pranešimai</li>
+          <li class="ticket__item">Kava ir pietūs</li>
+          <li class="ticket__item">1 seminaras</li>
+        </ul>
+      </article>
+      <article class="ticket">
+        <h2 class="ticket__name">VIP</h2>
+        <p class="ticket__price">179 €</p>
+        <ul class="ticket__list">
+          <li class="ticket__item">Visi pranešimai</li>
+          <li class="ticket__item">Vakarienė su pranešėjais</li>
+          <li class="ticket__item">Visi seminarai</li>
+        </ul>
+      </article>
+    </div>
+
+    <form class="form" action="#">
+      <h2 class="form__title">Registracija</h2>
+      <div class="form__row">
+        <div class="form__field">
+          <label class="form__label" for="name">Vardas ir pavardė</label>
+          <input class="form__input" type="text" id="name" placeholder="Rūta Rūtaitė" required>
+        </div>
+        <div class="form__field">
+          <label class="form__label" for="email">El. paštas</label>
+          <input class="form__input" type="email" id="email" placeholder="ruta@pastas.lt" required>
+        </div>
+      </div>
+      <div class="form__row">
+        <div class="form__field">
+          <label class="form__label" for="ticket">Bilietas</label>
+          <select class="form__input" id="ticket">
+            <option>Studento – 29 €</option>
+            <option selected>Standartinis – 89 €</option>
+            <option>VIP – 179 €</option>
+          </select>
+        </div>
+        <fieldset class="form__field">
+          <legend class="form__label">Marškinėlių dydis</legend>
+          <div class="sizes">
+            <label class="sizes__option"><input class="sizes__input" type="radio" name="size"><span class="sizes__label">S</span></label>
+            <label class="sizes__option"><input class="sizes__input" type="radio" name="size" checked><span class="sizes__label">M</span></label>
+            <label class="sizes__option"><input class="sizes__input" type="radio" name="size"><span class="sizes__label">L</span></label>
+            <label class="sizes__option"><input class="sizes__input" type="radio" name="size"><span class="sizes__label">XL</span></label>
+          </div>
+        </fieldset>
+      </div>
+      <div class="form__field">
+        <label class="form__label" for="question">Klausimas pranešėjams</label>
+        <textarea class="form__input" id="question" rows="3" placeholder="Ko norėtum paklausti?"></textarea>
+      </div>
+      <label class="form__check"><input type="checkbox" required> Sutinku gauti naujienas el. paštu</label>
+      <button class="btn btn--primary" type="submit">Patvirtinti registraciją <span class="btn__arrow">→</span></button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" alt="">
+        <span class="logo__text">kodas<span class="logo__accent">2027</span></span>
+      </a>
+      <p class="footer__text">Frontend konferencija · 2027 m. kovo 18–19 d. · Vilnius</p>
+    </div>
+    <nav class="footer__nav">
+      <a class="footer__link" href="index.html">Pradžia</a>
+      <a class="footer__link" href="programa.html">Programa</a>
+      <a class="footer__link" href="bilietai.html">Bilietai</a>
+    </nav>
+  </footer>
+</body>
+</html>

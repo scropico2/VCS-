@@ -1,0 +1,70 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.tickets {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+.ticket {
+  @include m.panel(32px);
+  @include m.hover-glow;
+  position: relative;
+  flex: 1 1 260px;
+
+  &__name {
+    font-size: 22px;
+  }
+
+  &__price {
+    margin: 12px 0 24px;
+    font-family: v.$font-heading;
+    font-size: 48px;
+    font-weight: 700;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__item {
+    &::before {
+      content: '✓';
+      margin-right: 10px;
+      color: v.$accent;
+      font-weight: 700;
+    }
+
+    &--off {
+      color: v.$muted;
+      text-decoration: line-through;
+
+      &::before {
+        content: '✕';
+        color: v.$muted;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: -14px;
+    left: 32px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, v.$primary, v.$accent);
+    color: #FFFFFF;
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &--featured {
+    border-color: v.$primary;
+    background: linear-gradient(180deg, rgba(v.$primary, 0.18), v.$surface 60%);
+  }
+}

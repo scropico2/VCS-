@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="lt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Programa – Kodas 2027</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="index.html">
+      <img class="logo__img" src="img/logo.svg" alt="">
+      <span class="logo__text">kodas<span class="logo__accent">2027</span></span>
+    </a>
+    <nav class="nav">
+      <a class="nav__link" href="index.html">Pradžia</a>
+      <a class="nav__link nav__link--active" href="programa.html">Programa</a>
+      <a class="nav__link" href="bilietai.html">Bilietai</a>
+    </nav>
+    <a class="btn btn--primary btn--small" href="bilietai.html">Pirkti bilietą</a>
+  </header>
+
+  <main class="section">
+    <h1 class="section__title">Programa</h1>
+    <p class="section__text">1 diena · 2027 m. kovo 18 d. Pranešimai vyksta trijose salėse vienu metu.</p>
+
+    <div class="legend">
+      <span class="tag tag--frontend">Frontend</span>
+      <span class="tag tag--design">Dizainas</span>
+      <span class="tag tag--backend">Backend</span>
+    </div>
+
+    <table class="agenda">
+      <thead>
+        <tr>
+          <th class="agenda__th">Laikas</th>
+          <th class="agenda__th">Pranešimas</th>
+          <th class="agenda__th">Sekcija</th>
+          <th class="agenda__th">Salė</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="agenda__row agenda__row--break">
+          <td class="agenda__cell agenda__cell--time">09:00</td>
+          <td class="agenda__cell" colspan="3">Registracija ir kava</td>
+        </tr>
+        <tr class="agenda__row">
+          <td class="agenda__cell agenda__cell--time">10:00</td>
+          <td class="agenda__cell">
+            <span class="agenda__talk">Šiuolaikinis CSS be bibliotekų</span>
+            <span class="agenda__speaker">Lukas Mažeika</span>
+          </td>
+          <td class="agenda__cell"><span class="tag tag--frontend">Frontend</span></td>
+          <td class="agenda__cell">A salė</td>
+        </tr>
+        <tr class="agenda__row">
+          <td class="agenda__cell agenda__cell--time">11:00</td>
+          <td class="agenda__cell">
+            <span class="agenda__talk">Dizaino sistema nuo nulio</span>
+            <span class="agenda__speaker">Eglė Stankevičiūtė</span>
+          </td>
+          <td class="agenda__cell"><span class="tag tag--design">Dizainas</span></td>
+          <td class="agenda__cell">B salė</td>
+        </tr>
+        <tr class="agenda__row">
+          <td class="agenda__cell agenda__cell--time">12:00</td>
+          <td class="agenda__cell">
+            <span class="agenda__talk">REST ar GraphQL: ką pasirinkti?</span>
+            <span class="agenda__speaker">Andrius Vasiliauskas</span>
+          </td>
+          <td class="agenda__cell"><span class="tag tag--backend">Backend</span></td>
+          <td class="agenda__cell">C salė</td>
+        </tr>
+        <tr class="agenda__row agenda__row--break">
+          <td class="agenda__cell agenda__cell--time">13:00</td>
+          <td class="agenda__cell" colspan="3">Pietų pertrauka</td>
+        </tr>
+        <tr class="agenda__row">
+          <td class="agenda__cell agenda__cell--time">14:00</td>
+          <td class="agenda__cell">
+            <span class="agenda__talk">JavaScript animacijos be lėtėjimo</span>
+            <span class="agenda__speaker">Rūta Kairytė</span>
+          </td>
+          <td class="agenda__cell"><span class="tag tag--frontend">Frontend</span></td>
+          <td class="agenda__cell">A salė</td>
+        </tr>
+        <tr class="agenda__row">
+          <td class="agenda__cell agenda__cell--time">15:00</td>
+          <td class="agenda__cell">
+            <span class="agenda__talk">Prieinamumas (accessibility) praktiškai</span>
+            <span class="agenda__speaker">Eglė Stankevičiūtė</span>
+          </td>
+          <td class="agenda__cell"><span class="tag tag--design">Dizainas</span></td>
+          <td class="agenda__cell">B salė</td>
+        </tr>
+        <tr class="agenda__row">
+          <td class="agenda__cell agenda__cell--time">16:00</td>
+          <td class="agenda__cell">
+            <span class="agenda__talk">Sass projekto architektūra</span>
+            <span class="agenda__speaker">Lukas Mažeika</span>
+          </td>
+          <td class="agenda__cell"><span class="tag tag--frontend">Frontend</span></td>
+          <td class="agenda__cell">A salė</td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a class="logo" href="index.html">
+        <img class="logo__img" src="img/logo.svg" alt="">
+        <span class="logo__text">kodas<span class="logo__accent">2027</span></span>
+      </a>
+      <p class="footer__text">Frontend konferencija · 2027 m. kovo 18–19 d. · Vilnius</p>
+    </div>
+    <nav class="footer__nav">
+      <a class="footer__link" href="index.html">Pradžia</a>
+      <a class="footer__link" href="programa.html">Programa</a>
+      <a class="footer__link" href="bilietai.html">Bilietai</a>
+    </nav>
+  </footer>
+</body>
+</html>

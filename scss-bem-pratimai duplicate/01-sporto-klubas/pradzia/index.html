@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="lt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulsas – sporto klubas</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css" />
+    <!-- 2. Šriftai iš fonts.google.com -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" />
+    <!-- 3. Mūsų CSS – PASKUTINIS, kad perrašytų reset -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img" src="img/logo.svg" alt="Pulsas" />Pulsas
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link nav__link--active">Pradžia</a>
+        <a href="tvarkarastis.html" class="nav__link">Tvarkaraštis</a>
+        <a href="registracija.html" class="nav__link">Registracija</a>
+      </nav>
+    </header>
+    <!-- header blokas: logotipas (img/logo.svg + „Pulsas“) ir nav blokas su 3 nuorodomis:
+       Pradžia → index.html, Tvarkaraštis → tvarkarastis.html, Registracija → registracija.html.
+       Aktyvaus puslapio nuoroda gauna modifikatorių --active -->
+
+    <!-- hero blokas (fonas – img/hero.svg per CSS url()):
+         badge „Nauja: rytinės treniruotės 6:30“ (pulsuoja), h1, tekstas, 2 mygtukai (btn blokas) -->
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <div class="badge badge--pulse">Nauja: Rytinės treniruotės 6:30</div>
+          <h1 class="hero__title">Treniruokis su pulsu</h1>
+          <p class="hero__text">
+            Grupinės treniruotės, patyrę treneriai ir aiškus tvarkaraštis -
+            viskas vienoje vietoje.
+          </p>
+          <div class="hero__actions">
+            <a href="registracija.html" class="btn btn--primary"
+              >Registruotis</a
+            >
+            <a href="tvarkarastis.html" class="btn btn-outline">Tvarkaraštis</a>
+          </div>
+        </div>
+      </section>
+      <!-- section blokas: h2 „Treniruotės“, tekstas ir 4 kortelės (card blokas).
+         Kardio kortelė – su modifikatoriumi --featured ir žyma „Populiaru“ -->
+      <section class="section">
+        <h2 class="section__title">Treniruotės</h2>
+        <p class="section__text">
+          Pasirink pagal savo tikslą ir pasirengimo lygį.
+        </p>
+
+        <div class="cards">
+          <div class="card">
+            <img class="card__icon" src="img/joga.svg" alt="Jogos pratimai" />
+            <h3 class="card__title">Joga</h3>
+            <p class="card__text">Lankstumas, laikysena ir ramus kvėpavimas.</p>
+            <p class="card__meta">60 min | Lengva</p>
+          </div>
+
+          <div class="card">
+            <img class="card__icon" src="img/jega.svg" alt="Jėgos pratimai" />
+            <h3 class="card__title">Jėgos treniruotė</h3>
+            <p class="card__text">
+              Svoriai, taisyklinga technika ir stiprus kūnas.
+            </p>
+            <p class="card__meta">50 min | Vidutinė</p>
+          </div>
+
+          <div class="card card--featured">
+            <div class="card__badge">Populiaru</div>
+            <img
+              class="card__icon"
+              src="img/kardio.svg"
+              alt="Kardio pratimai" />
+            <h3 class="card__title">Kardio intervalai</h3>
+            <p class="card__text">
+              Trumpi intensyvūs pratimai ir aktyvus poilsis.
+            </p>
+            <p class="card__meta">45 min | Sunki</p>
+          </div>
+
+          <div class="card">
+            <img
+              class="card__icon"
+              src="img/spiningas.svg"
+              alt="Spiningas pratimai" />
+            <h3 class="card__title">Spiningas</h3>
+            <p class="card__text">Ritmas, muzika ir ištvermė ant dviračio.</p>
+            <p class="card__meta">45 min | Vidutinė</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer blokas: tekstas „© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12“ ir tos pačios 3 nuorodos -->
+    <footer class="footer">
+      <p class="footer__text">
+        © 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12
+      </p>
+      <div class="footer__nav">
+        <a class="footer__link" href="index.html">Pagrindinis</a>
+        <a class="footer__link" href="tvarkarastis.html">Tvarkaraštis</a>
+        <a class="footer__link" href="registracija.html">Registracija</a>
+      </div>
+    </footer>
+  </body>
+</html>

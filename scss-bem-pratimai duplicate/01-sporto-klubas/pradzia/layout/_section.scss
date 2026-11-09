@@ -1,0 +1,25 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.section {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 64px 24px;
+
+  &__title {
+    color: v.$color-dark;
+    font-size: 40px;
+    font-weight: 800;
+  }
+  &__text {
+    margin: 10px 0 32px;
+    color: v.$color-text-muted;
+  }
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  animation: slide-up 0.8s ease-out 0.4s both;
+}

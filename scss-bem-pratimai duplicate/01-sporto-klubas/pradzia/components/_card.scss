@@ -1,0 +1,53 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.card {
+  @include m.surface;
+  @include m.hover-lift;
+  position: relative;
+  flex: 1 1 220px;
+  padding: 24px;
+  border-top: 6px solid transparent;
+
+  &__icon {
+    width: 60px;
+    height: 60px;
+    padding: 8px;
+    margin-bottom: 16px;
+    border-radius: v.$radius;
+    background-color: rgba(v.$color-primary, 0.4);
+    transition: transform v.$speed;
+  }
+  &:hover &__icon {
+    transform: scale(1.1) rotate(-8deg);
+  }
+  &__title {
+    margin-bottom: 8px;
+    font-size: 18px;
+  }
+  &__text {
+    margin-bottom: 12px;
+    color: v.$color-text-muted;
+  }
+  &__meta {
+    font-size: 14px;
+    font-weight: 600;
+    color: v.$color-primary;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 6px;
+    background: v.$color-dark;
+    color: v.$color-surface;
+    border-radius: v.$radius;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &--featured {
+    border-top-color: v.$color-primary;
+  }
+}

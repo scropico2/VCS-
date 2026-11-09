@@ -1,0 +1,48 @@
+@use 'sass:color';
+@use 'variables' as v;
+
+// Media užklausa: @include m.respond(v.$tablet) { ... }
+@mixin respond($min) {
+  @media (min-width: $min) {
+    @content;
+  }
+}
+
+// Tamsus paviršius su rėmeliu ir šešėliu
+@mixin panel($padding: 28px) {
+  padding: $padding;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  background: v.$surface;
+  box-shadow: v.$shadow;
+}
+
+// Pakilimas ir švytėjimas užvedus pelę
+@mixin hover-glow {
+  transition: transform v.$speed ease, box-shadow v.$speed ease, border-color v.$speed;
+
+  &:hover {
+    transform: translateY(-8px);
+    border-color: v.$primary;
+    box-shadow: v.$glow;
+  }
+}
+
+// Fokusas formos laukeliams
+@mixin focus-ring($color: v.$primary) {
+  outline: none;
+  border-color: $color;
+  box-shadow: 0 0 0 4px rgba($color, 0.25);
+}
+
+// Spalvota žyma iš vienos spalvos
+@mixin tinted($color) {
+  color: $color;
+  background: rgba($color, 0.14);
+  border: 1px solid rgba($color, 0.35);
+}
+
+// Šviesesnis atspalvis hover būsenai
+@function lighter($color, $amount: 10%) {
+  @return color.adjust($color, $lightness: $amount);
+}

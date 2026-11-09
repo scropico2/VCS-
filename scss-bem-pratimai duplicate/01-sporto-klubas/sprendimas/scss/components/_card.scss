@@ -1,0 +1,58 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.card {
+  @include m.surface;
+  @include m.hover-lift;
+  position: relative;
+  flex: 1 1 220px;
+  padding: 28px 24px;
+  border-top: 4px solid transparent;
+
+  &__icon {
+    width: 56px;
+    height: 56px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: v.$radius;
+    background: rgba(v.$primary, 0.1);
+    transition: transform v.$speed;
+  }
+
+  // Užvedus pelę ant kortelės, ikona padidėja ir pasisuka
+  &:hover &__icon {
+    transform: scale(1.1) rotate(-8deg);
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    font-size: 20px;
+  }
+
+  &__text {
+    margin-bottom: 16px;
+    color: v.$muted;
+  }
+
+  &__meta {
+    font-size: 14px;
+    font-weight: 600;
+    color: v.$primary;
+  }
+
+  &__badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: v.$dark;
+    color: v.$surface;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  &--featured {
+    border-top-color: v.$primary;
+  }
+}

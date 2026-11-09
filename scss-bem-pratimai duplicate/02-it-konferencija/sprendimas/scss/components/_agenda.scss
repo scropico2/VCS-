@@ -1,0 +1,69 @@
+@use '../abstracts/variables' as v;
+@use '../abstracts/mixins' as m;
+
+.agenda {
+  width: 100%;
+  border: 1px solid v.$border;
+  border-radius: v.$radius;
+  background: v.$surface;
+  overflow: hidden;
+  border-collapse: separate; // kad veiktų border-radius
+  border-spacing: 0;
+
+  &__th {
+    padding: 16px 20px;
+    background: v.$surface-light;
+    color: v.$muted;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__row {
+    transition: background v.$speed;
+
+    &:hover {
+      background: rgba(v.$primary, 0.1);
+    }
+
+    // Kairysis akcentas užvedus pelę
+    &:hover .agenda__cell:first-child {
+      box-shadow: inset 4px 0 0 v.$primary;
+    }
+
+    &--break {
+      background: repeating-linear-gradient(
+        -45deg,
+        rgba(v.$muted, 0.06) 0 10px,
+        transparent 10px 20px
+      );
+      color: v.$muted;
+      font-style: italic;
+    }
+  }
+
+  &__cell {
+    padding: 16px 20px;
+    border-top: 1px solid v.$border;
+    vertical-align: middle;
+
+    &--time {
+      width: 100px;
+      font-family: v.$font-heading;
+      font-weight: 700;
+      color: v.$accent;
+    }
+  }
+
+  &__talk {
+    display: block;
+    font-weight: 600;
+  }
+
+  &__speaker {
+    font-size: 14px;
+    color: v.$muted;
+  }
+}

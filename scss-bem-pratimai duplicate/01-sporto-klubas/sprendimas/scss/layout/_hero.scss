@@ -1,0 +1,41 @@
+@use '../abstracts/variables' as v;
+
+.hero {
+  padding: 96px 24px;
+  // Kelias skaičiuojamas nuo css/style.css, ne nuo šio failo
+  background: v.$dark url('../img/hero.svg') center / cover no-repeat;
+  color: v.$surface;
+
+  @media (min-width: 768px) {
+    padding: 96px 48px;
+  }
+
+  &__content {
+    max-width: 600px;
+  }
+
+  &__title {
+    margin: 20px 0 16px;
+    font-size: 40px;
+    font-weight: 800;
+    animation: slide-up 0.8s ease-out both;
+
+    @media (min-width: 768px) {
+      font-size: 56px;
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 18px;
+    color: rgba(v.$surface, 0.8);
+    animation: slide-up 0.8s ease-out 0.2s both;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    animation: slide-up 0.8s ease-out 0.4s both;
+  }
+}

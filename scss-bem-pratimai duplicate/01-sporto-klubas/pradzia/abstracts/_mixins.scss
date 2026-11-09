@@ -1,0 +1,24 @@
+@use "../abstracts/variables" as v;
+
+@mixin flex-row($gap: 16px) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+@mixin surface {
+  background-color: v.$color-surface;
+  border-radius: v.$radius;
+  box-shadow: v.$shadow;
+}
+
+@mixin hover-lift {
+  transition:
+    transform v.$speed ease,
+    box-shadow v.$speed ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: v.$shadow-hover;
+  }
+}

@@ -1,0 +1,24 @@
+// style.scss – tik @use tvarka.
+
+// 1. Bendri elementai
+@use 'base/base';
+@use 'base/animations';
+
+// 2. Puslapio dalys
+@use 'layout/header';
+@use 'layout/hero';
+@use 'layout/section';
+@use 'layout/footer';
+
+// 3. Komponentai
+@use 'components/logo';
+@use 'components/nav';
+@use 'components/btn';
+@use 'components/live';
+@use 'components/tag';
+@use 'components/stats';
+@use 'components/speaker';
+@use 'components/agenda';
+@use 'components/ticket';
+@use 'components/form';
+@use 'components/sizes';

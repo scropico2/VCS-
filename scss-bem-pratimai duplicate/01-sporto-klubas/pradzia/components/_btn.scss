@@ -1,0 +1,36 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.btn {
+  padding: 8px 16px;
+  border-radius: v.$radius;
+  display: inline-block;
+  font-weight: 700;
+  border: 2px solid transparent;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform v.$speed,
+    box-shadow v.$speed,
+    backround v.$speed;
+
+  &--primary {
+    background-color: v.$color-primary;
+    color: v.$color-surface;
+  }
+  &:hover {
+    transform: translateY(-2px);
+    background: v.$color-primary-hover;
+    box-shadow: 0 15px 30px rgba(v.$color-primary, 0.4);
+  }
+
+  &--outline {
+    border-color: rgba(v.$color-surface, 0.6);
+    color: v.$color-surface;
+
+    &:hover {
+      background-color: v.$color-surface;
+      color: v.$color-dark;
+    }
+  }
+}

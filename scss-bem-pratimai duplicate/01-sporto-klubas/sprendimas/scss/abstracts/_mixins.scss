@@ -1,0 +1,25 @@
+@use 'variables' as v;
+
+// Elementai vienoje eilutėje, centruoti vertikaliai
+@mixin flex-row($gap: 16px) {
+  display: flex;
+  align-items: center;
+  gap: $gap;
+}
+
+// Balta kortelė su šešėliu
+@mixin surface {
+  background: v.$surface;
+  border-radius: v.$radius;
+  box-shadow: v.$shadow;
+}
+
+// Pakilimas užvedus pelę (hover)
+@mixin hover-lift {
+  transition: transform v.$speed ease, box-shadow v.$speed ease;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: v.$shadow-hover;
+  }
+}

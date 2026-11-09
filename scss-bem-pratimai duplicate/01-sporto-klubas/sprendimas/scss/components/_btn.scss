@@ -1,0 +1,40 @@
+@use '../abstracts/variables' as v;
+
+.btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border: 2px solid transparent;
+  border-radius: 999px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: transform v.$speed, box-shadow v.$speed, background v.$speed;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &--primary {
+    background: v.$primary;
+    color: v.$surface;
+
+    &:hover {
+      background: v.$primary-dark;
+      box-shadow: 0 8px 20px rgba(v.$primary, 0.4);
+    }
+  }
+
+  &--outline {
+    border-color: rgba(v.$surface, 0.6);
+    color: v.$surface;
+
+    &:hover {
+      background: v.$surface;
+      color: v.$dark;
+    }
+  }
+
+  &--full {
+    width: 100%;
+  }
+}

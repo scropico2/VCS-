@@ -1,0 +1,31 @@
+// Spalvos (tamsi tema)
+$bg: #0B1020;
+$surface: #141B34;
+$surface-light: #1D2547;
+$border: #2A3360;
+$text: #E6E9F5;
+$muted: #8B93B0;
+$primary: #7C6CFF;
+$accent: #00D1B2;
+
+// Sekcijų spalvos: iš šio žemėlapio (map) @each sugeneruoja .tag--* klases
+$tracks: (
+  frontend: #00D1B2,
+  design: #FF6B9A,
+  backend: #FFB020,
+);
+
+// Šriftai
+$font-heading: 'Space Grotesk', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// Formos, šešėliai, greitis
+$radius: 16px;
+$radius-sm: 10px;
+$shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+$glow: 0 0 0 1px rgba($primary, 0.6), 0 16px 40px rgba($primary, 0.35);
+$speed: 0.3s;
+
+// Lūžio taškai (breakpoints)
+$tablet: 768px;
+$desktop: 1024px;
