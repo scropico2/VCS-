@@ -1,30 +1,102 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="lt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registracija – Pulsas</title>
-  <!-- 1. CSS reset iš CDN (nuoroda – UZDUOTIS.md) -->
-
-  <!-- 2. Google Fonts: Montserrat (700, 800) ir Inter (400, 500, 600) -->
-
-  <!-- 3. Sukompiliuotas css/style.css (ne .scss!) -->
-
-</head>
-<body>
-  <!-- header blokas: logotipas (img/logo.svg + „Pulsas“) ir nav blokas su 3 nuorodomis:
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registracija – Pulsas</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css" />
+    <!-- 2. Šriftai iš fonts.google.com -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Montserrat:wght@700;800&display=swap" />
+    <!-- 3. Mūsų CSS – PASKUTINIS, kad perrašytų reset -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <a href="index.html" class="header__logo">
+        <img class="header__logo-img" src="img/logo.svg" alt="Pulsas" />Pulsas
+      </a>
+      <nav class="nav">
+        <a href="index.html" class="nav__link">Pradžia</a>
+        <a href="tvarkarastis.html" class="nav__link">Tvarkaraštis</a>
+        <a href="registracija.html" class="nav__link nav__link--active">Registracija</a>
+      </nav>
+    </header>
+    <!-- header blokas: logotipas (img/logo.svg + „Pulsas“) ir nav blokas su 3 nuorodomis:
        Pradžia → index.html, Tvarkaraštis → tvarkarastis.html, Registracija → registracija.html.
        Aktyvaus puslapio nuoroda gauna modifikatorių --active -->
 
-  <main>
-    <!-- Kairėje: h1, tekstas ir benefits sąrašas (<ul>) su 3 privalumais -->
+    <main class="signup">
+      <!-- Kairėje: h1, tekstas ir benefits sąrašas (<ul>) su 3 privalumais -->
 
-    <!-- Dešinėje: form blokas. Laukai: vardas ir pavardė, el. paštas, telefonas,
+      <div class="signup__info">
+        <h1 class="section__title">Registracija į treniruotę</h1>
+        <p class="section__text">Užpildyk formą ir mes patvirtinsime vietą el. paštu per 24 valandas.</p>
+        <ul class="benefits">
+          <li class="benefits__item">Pirmoji treniruotė - nemokamai</li>
+          <li class="benefits__item">Narystę galima sustabdyti bet kada</li>
+          <li class="benefits__item">Rankšluosčiai ir spintelės įskaičiuoti</li>
+        </ul>
+      </div>
+      <form class="form" action="#">
+        <div class="form__group">
+          <label class="form__label" for="name">Vardas ir pavardė</label>
+          <input class="form__input" type="text" id="name" placeholder="Įrašykite savo vardą ir pavardę" required />
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="email">El. paštas</label>
+            <input class="form__input" type="email" id="email" placeholder="Įveskite savo paštą" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">Telefono nr. </label>
+            <input class="form__input" type="phone" id="phone" placeholder="Jūsų tel. nr.:" />
+          </div>
+        </div>
+        <div class="form__groupo">
+          <label for="form__label" for="workout">Treniruotė</label>
+          <select class="form__input" id="workout">
+            <option>Joga</option>
+            <option>Jėgos treniruotė</option>
+            <option>Kardio intervalai</option>
+            <option>Spiningas</option>
+          </select>
+        </div>
+
+        <fieldset class="form__group">
+          <legend class="form__label">Narystė</legend>
+          <div class="form__options">
+            <label class="form__option"><input type="radio" name="plan" checked /> Vienkartinė - 8 eur. </label>
+            <label class="form__option"><input type="radio" name="plan" /> Mėnesio - 39 eur. </label>
+            <label class="form__option"><input type="radio" name="plan" /> Metinė - 349 eur. </label>
+          </div>
+        </fieldset>
+        <div class="form__group">
+          <label class="form__label" for="comment">Komentaras</label>
+          <textarea
+            class="form__input from__input--textarea"
+            id="comment"
+            rows="3"
+            placeholder="Traumos, tikslai ar klausimai treneriui"></textarea>
+        </div>
+        <label class="form__option"> <input type="checkbox" required />Sutinku su klubo taisyklėmis </label>
+        <button class="btn btn--primary btn--full" type="submit">Registruotis</button>
+      </form>
+      <!-- Dešinėje: form blokas. Laukai: vardas ir pavardė, el. paštas, telefonas,
          treniruotė (<select>), narystė (3 radio), komentaras (<textarea>),
          sutikimas (checkbox) ir mygtukas „Registruotis“.
          Kiekvienas laukas turi <label for="..."> -->
-  </main>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12</p>
+      <div class="footer__nav">
+        <a class="footer__link" href="index.html">Pagrindinis</a>
+        <a class="footer__link" href="tvarkarastis.html">Tvarkaraštis</a>
+        <a class="footer__link" href="registracija.html">Registracija</a>
+      </div>
+    </footer>
 
-  <!-- footer blokas: tekstas „© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12“ ir tos pačios 3 nuorodos -->
-</body>
+    <!-- footer blokas: tekstas „© 2026 Pulsas sporto klubas · Vilnius, Sporto g. 12“ ir tos pačios 3 nuorodos -->
+  </body>
 </html>

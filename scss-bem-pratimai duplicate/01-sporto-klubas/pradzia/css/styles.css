@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::before,
 *::after {
@@ -164,6 +165,19 @@ h3 {
   animation: slide-up 0.8s ease-out 0.4s both;
 }
 
+.signup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+  align-items: flex-start;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 64px 24px;
+}
+.signup__info {
+  flex: 1 1 320px;
+}
+
 .footer {
   display: flex;
   align-items: center;
@@ -198,6 +212,30 @@ h3 {
 }
 .badge--pulse {
   animation: pulse 2s infinite;
+}
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.benefits__item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 500;
+  padding: 8px 20px;
+}
+.benefits__item::before {
+  content: "✔";
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #ff5a36;
+  color: #ffffff;
 }
 
 .btn {
@@ -282,4 +320,73 @@ h3 {
 }
 .card--featured {
   border-top-color: #ff5a36;
+}
+
+.form {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(20, 23, 43, 0.0784313725);
+  flex: 1 1 420px;
+  flex-direction: column;
+  gap: 20px;
+  padding: 32px;
+}
+.form__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.form__row > * {
+  flex: 1 1 180px;
+}
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.form__label {
+  font-size: 14px;
+  font-weight: 600;
+}
+.form__input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #e3e5ee;
+  border-radius: 8px;
+  background-color: #ffffff;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+.form__input::-moz-placeholder {
+  color: #a0a4b8;
+}
+.form__input::placeholder {
+  color: #a0a4b8;
+}
+.form__input::hover {
+  border-color: #c5c8d6;
+}
+.form__input:focus {
+  outline: none;
+  border-color: #ff5a36;
+  box-shadow: 0 0 0 4px 4rgba #ff5a36, 0.15;
+}
+.form__input--textarea {
+  resize: vertical;
+}
+.form__options {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.form__option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+.form__option input {
+  width: 18px;
+  height: 18px;
+  accent-color: #ff5a36;
 }

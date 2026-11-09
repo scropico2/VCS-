@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  &__item {
+    @include m.flex-row(12px);
+    font-weight: 500;
+    padding: 8px 20px;
+
+    &::before {
+      content: "\2714";
+      display: grid;
+      place-items: center;
+      flex-shrink: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: v.$color-primary;
+      color: v.$color-surface;
+    }
+  }
+}
