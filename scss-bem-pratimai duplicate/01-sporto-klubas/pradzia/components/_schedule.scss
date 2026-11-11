@@ -1,0 +1,44 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.schedule {
+  @include m.surface;
+  overflow-x: auto;
+
+  &__table {
+    width: 100%;
+    min-width: 720px;
+  }
+
+  &__head {
+    background-color: v.$color-dark;
+    color: v.$color-surface;
+  }
+
+  &__th {
+    padding: 8px 12px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: left;
+  }
+
+  &__row {
+    border-bottom: 1px solid v.$color-border;
+    transition: backround v.$speed;
+
+    &:nth-child(even) {
+      background-color: v.$color-bg;
+    }
+    &:hover {
+      background-color: rgba(v.$color-primary, 0.08);
+    }
+  }
+
+  &__cell {
+    padding: 14px 20px;
+    &--time {
+      font-weight: 600;
+      color: v.$color-primary;
+    }
+  }
+}

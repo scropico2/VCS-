@@ -265,6 +265,9 @@ h3 {
   background-color: #ffffff;
   color: #14172b;
 }
+.btn--full {
+  width: 100%;
+}
 
 .card {
   background-color: #ffffff;
@@ -320,6 +323,23 @@ h3 {
 }
 .card--featured {
   border-top-color: #ff5a36;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  justify-content: space-between;
+  margin-top: 20px;
+  padding: 8px 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 90, 54, 0.1);
+}
+.cta__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #14172b;
 }
 
 .form {
@@ -389,4 +409,42 @@ h3 {
   width: 18px;
   height: 18px;
   accent-color: #ff5a36;
+}
+
+.schedule {
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(20, 23, 43, 0.0784313725);
+  overflow-x: auto;
+}
+.schedule__table {
+  width: 100%;
+  min-width: 720px;
+}
+.schedule__head {
+  background-color: #14172b;
+  color: #ffffff;
+}
+.schedule__th {
+  padding: 8px 12px;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: left;
+}
+.schedule__row {
+  border-bottom: 1px solid #e3e5ee;
+  transition: backround 0.25s;
+}
+.schedule__row:nth-child(even) {
+  background-color: #f5f6fa;
+}
+.schedule__row:hover {
+  background-color: rgba(255, 90, 54, 0.08);
+}
+.schedule__cell {
+  padding: 14px 20px;
+}
+.schedule__cell--time {
+  font-weight: 600;
+  color: #ff5a36;
 }
