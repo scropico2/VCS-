@@ -18,3 +18,15 @@
     background-position: 0% 50%;
   }
 }
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: (0.4);
+    transform: (0.8);
+  }
+}
