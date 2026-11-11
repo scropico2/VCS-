@@ -1,0 +1,61 @@
+@use "../abstracts/variables";
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 24px;
+  background-color: var(--bg);
+  animation: fadeIn 0.8s ease-out;
+
+  &__title {
+    margin-right: auto;
+    color: var(--text);
+    font-size: 24px;
+
+    &--marked {
+      color: var(--accent);
+    }
+  }
+
+  &__button {
+    margin-left: auto;
+    background-color: var(--primary);
+    border-radius: 12px;
+    border: transparent;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 8px 16px;
+    cursor: pointer;
+    &:hover {
+      background-color: color-mix(in srgb, var(--accent) 10%, transparent);
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 12px 24px;
+
+  &__link {
+    position: relative;
+    padding-bottom: 6px;
+    transition: color 0.2s ease;
+    color: var(--text-muted);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--text);
+    }
+    &--active {
+      color: var(--text);
+      border-bottom: 2px solid var(--accent);
+
+      &:hover {
+        color: var(--text-muted);
+      }
+    }
+  }
+}

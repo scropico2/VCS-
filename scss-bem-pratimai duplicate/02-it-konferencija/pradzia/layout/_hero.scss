@@ -1,0 +1,13 @@
+@use "../abstracts/variables";
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 80px 24px 96px;
+  text-align: center;
+  background: url("../img/tinklelis.svg"), linear-gradient(120deg, #1a1446, var(--bg), #062b33, #1a1446);
+  background-size:
+    40px 40px,
+    300% 300%;
+  animation: gradientShift 12s ease infinite;
+}
