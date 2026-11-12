@@ -1,0 +1,88 @@
+.lowerHero {
+  padding-top: 140px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  &__title {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 8px;
+  }
+
+  &__text {
+    font-size: 16px;
+    color: var(--text-muted);
+    margin-bottom: 40px;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background-color: var(--surface);
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(135deg, var(--primary), var(--accent)) border-box;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  padding-bottom: 24px;
+
+  &:hover {
+    transform: translateY(-20px);
+    box-shadow: var(--shadow);
+  }
+
+  &__img {
+    border-radius: 12px 12px 0 0;
+    margin-bottom: 20px;
+  }
+
+  &__badge--green,
+  &__badge--yellow,
+  &__badge--red {
+    display: inline;
+    margin: 0 20px 12px;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid transparent;
+  }
+  &__badge--green {
+    color: var(--frontend);
+    background: rgba(79, 209, 181, 0.15);
+    border-color: rgba(79, 209, 181, 0.4);
+  }
+  &__badge--red {
+    color: var(--design);
+    background: rgba(240, 112, 154, 0.15);
+    border-color: rgba(240, 112, 154, 0.4);
+  }
+  &__badge--yellow {
+    color: var(--backend);
+    background: rgba(240, 178, 74, 0.15);
+    border-color: rgba(240, 178, 74, 0.4);
+  }
+
+  &__user {
+    padding: 16px 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 6px;
+  }
+  &__text {
+    padding: 16px 20px;
+    font-size: 16px;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+}

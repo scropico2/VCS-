@@ -2,8 +2,8 @@
 
 .hero {
   position: relative;
-  overflow: hidden;
-  padding: 80px 24px 96px;
+
+  padding: 80px 24px 0px;
   text-align: center;
   background: url("../img/tinklelis.svg"), linear-gradient(120deg, #1a1446, var(--bg), #062b33, #1a1446);
   background-size:
@@ -91,6 +91,9 @@
 }
 
 .statistics {
+  position: relative;
+  z-index: 1;
+  transform: translateY(50%);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
@@ -99,7 +102,7 @@
 
   background-color: var(--surface);
   border: 1px solid var(--border);
-  margin: 30px auto 0;
+  margin: 0px auto 0;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
   border-radius: 12px;
 
