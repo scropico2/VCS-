@@ -47,9 +47,13 @@
     transition: color 0.2s ease;
     color: var(--text-muted);
     text-decoration: none;
+    transition:
+      transform 0.25s ease,
+      color 0.25s ease;
 
     &:hover {
       color: var(--text);
+      transform: translateY(-4px);
     }
     &--active {
       color: var(--text);

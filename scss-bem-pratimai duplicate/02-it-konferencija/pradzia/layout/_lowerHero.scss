@@ -1,7 +1,10 @@
+@use "../abstracts/variables";
+
 .lowerHero {
   padding-top: 140px;
   max-width: 1200px;
   margin: 0 auto;
+  margin-bottom: 80px;
 
   &__title {
     font-size: 36px;
