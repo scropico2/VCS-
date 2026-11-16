@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Programa – Kodas 2027</title>
     <!-- reset (CDN) → Google Fonts → css/style.css -->
-     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  </head>
+
   <body>
     <header class="header">
       <a class="header__logo" href="index.html">
@@ -25,6 +25,108 @@
       </nav>
       <a class="header__button" href="bilietai.html">Pirkti Bilietą</a>
     </header>
-    <!-- Puslapį kurkite pagal UZDUOTIS.md ir tikslas-programa.png -->
+
+    <section class="programaHero">
+      <h2 class="programaHero__title">Programa</h2>
+      <p class="programaHero__text">1 diena • 2027 m. kovo 18 d. Pranešimai vyksta trijose salése vienu metu.</p>
+      <div class="programaBadges">
+        <div class="programaBadge--green">Frontend</div>
+        <div class="programaBadge--red">Dizainas</div>
+        <div class="programaBadge--yellow">Backend</div>
+      </div>
+
+      <div class="programaTable">
+        <table class="programaTable__table">
+          <thead>
+            <tr>
+              <th>Laikas</th>
+              <th>Pranešimas</th>
+              <th>Sekcija</th>
+              <th>Salė</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="programaTable__row programaTable__row--break">
+              <td class="programaTable__time">09:00</td>
+              <td colspan="3">Registracija ir kava</td>
+            </tr>
+            <tr class="programaTable__row">
+              <td class="programTable__time">10:00</td>
+              <td>
+                <div class="programaTable__title">Šiuolaikinis CSS be bibliotekų</div>
+                <div class="programaTable__user">Lukas Mažeika</div>
+              </td>
+              <td><span class="programaBadge--green">FrontEnd</span></td>
+              <td class="programaTable__room">A salė</td>
+            </tr>
+            <tr class="programaTable__row">
+              <td class="programaTable__time">11:00</td>
+              <td>
+                <div class="programaTable__title">Dizaino sistema nuo nulio</div>
+                <div class="programaTable__user">Eglė Stankevičiūtė</div>
+              </td>
+              <td><span class="programaBadge--red">Dizainas</span></td>
+              <td class="programaTable__room">B salė</td>
+            </tr>
+            <tr class="programaTable__row">
+              <td class="programaTable__time">12:00</td>
+              <td>
+                <div class="programaTable__title">Rest ar GraphQL:ką pasirinkti?</div>
+                <div class="programaTable__user">Andrius Vasiliauskas</div>
+              </td>
+              <td><span class="programaBadge--yellow">Backend</span></td>
+              <td class="programaTable__room">C salė</td>
+            </tr>
+            <tr class="programaTable__row programaTable__row--break">
+              <td class="programaTable__time">13:00</td>
+              <td colspan="3">Pietų pertrauka</td>
+            </tr>
+            <tr class="programaTable__row">
+              <td class="programaTable__time">14:00</td>
+              <td>
+                <div class="programaTable__title">JavaScript animacijos be letėjimo</div>
+                <div class="programaTable__user">Rūta Kairytė</div>
+              </td>
+              <td><span class="programaBadge--green">Frontend</span></td>
+              <td class="programaTable__room">A salė</td>
+            </tr>
+            <tr class="programaTable__row">
+              <td class="programaTable__time">15:00</td>
+              <td>
+                <div class="programaTable__title">Prieinamumas (accessibility) praktiškai</div>
+                <div class="programaTable__user">Eglė Stankevičiūtė</div>
+              </td>
+              <td><span class="programaBadge--red">Dizainas</span></td>
+              <td class="programaTable__room">B salė</td>
+            </tr>
+            <tr class="programaTable__row">
+              <td class="programaTable__time">16:00</td>
+              <td>
+                <div class="programaTable__title">Sass projekto struktūra</div>
+                <div class="programaTable__user">Lukas Mažeika</div>
+              </td>
+              <td><span class="programaBadge--green">Frontend</span></td>
+              <td class="programaTable__room">A salė</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <img class="footer__img" src="img/logo.svg" alt="logo" />
+          <h1 class="header__title">Kodas<span class="header__title header__title--marked">2027</span></h1>
+        </div>
+        <div class="footer__text">Frontend konferencija · 2027 m. kovo 18–19 d. · Vilnius</div>
+      </div>
+
+      <div class="footer__nav">
+        <a class="footer__link" href="index.html">Pradžia</a>
+        <a class="footer__link" href="programa.html">Programa</a>
+        <a class="footer__link" href="bilietai.html">Bilietai</a>
+      </div>
+    </footer>
   </body>
 </html>
