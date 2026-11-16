@@ -325,7 +325,7 @@
 .programaHero__text {
   font-size: 16px;
   color: var(--text-muted);
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .programaBadges {
@@ -379,6 +379,36 @@
 }
 .programaTable__table td {
   padding: 14px 20px;
+}
+.programaTable__row {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+.programaTable__row--break {
+  font-style: italic;
+  color: var(--text-muted);
+  background-color: #151a33;
+  background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, 0.03) 0 10px, transparent 10px 20px);
+  animation: stripesMove 1s linear infinite;
+}
+.programaTable__time {
+  color: var(--frontend);
+  font-weight: 700;
+}
+.programaTable__title {
+  font-weight: 600;
+  color: var(--text);
+  font-size: 18px;
+}
+.programaTable__user {
+  margin-top: 8px;
+  font-size: 16px;
+  color: var(--text-muted);
+}
+.programaTable__room {
+  color: var(--text);
+  font-weight: 700;
+  font-style: italic;
+  animation: pulse 1.5s ease-in-out infinite;
 }
 
 *,
@@ -447,5 +477,13 @@ h3 {
   50% {
     opacity: 0.4;
     transform: 0.8;
+  }
+}
+@keyframes stripesMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 28.28px 0;
   }
 }

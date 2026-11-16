@@ -30,3 +30,12 @@
     transform: (0.8);
   }
 }
+
+@keyframes stripesMove {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 28.28px 0;
+  }
+}
