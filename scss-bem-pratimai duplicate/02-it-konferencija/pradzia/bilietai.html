@@ -24,6 +24,85 @@
       </nav>
       <a class="header__button" href="bilietai.html">Pirkti Bilietą</a>
     </header>
+
+    <section class="ticketsHero">
+      <h2 class="ticketsHero__title">Bilietai</h2>
+      <p class="ticketsHero__text">Kaina galioja iki vasario 1 d. Visi bilietai - abiem dienoms.</p>
+      <div class="cardsSection">
+        <div class="ticketsCard">
+          <h2 class="ticketsCard__title">Studento</h2>
+          <div class="ticketsCard__price">29$</div>
+          <li class="ticketsCard__benefits">Visi pranešimai</li>
+          <li class="ticketsCard__benefits">Kava ir pietūs</li>
+          <li class="ticketsCard__benefits--crossed">Seminarai</li>
+        </div>
+        <div class="ticketsCard ticketsCard--selected">
+          <span class="ticketsCard--badge">Populiariausias</span>
+          <h2 class="ticketsCard__title">Standartinis</h2>
+          <div class="ticketsCard__price">89$</div>
+          <li class="ticketsCard__benefits">Visi pranešimai</li>
+          <li class="ticketsCard__benefits">Kava ir pietūs</li>
+          <li class="ticketsCard__benefits">1 seminaras</li>
+        </div>
+        <div class="ticketsCard">
+          <h2 class="ticketsCard__title">VIP</h2>
+          <div class="ticketsCard__price">179$</div>
+          <li class="ticketsCard__benefits">Visi pranešimai</li>
+          <li class="ticketsCard__benefits">Kava ir pietūs</li>
+          <li class="ticketsCard__benefits">Visi seminarai</li>
+        </div>
+      </div>
+      <section class="signup">
+        <div class="signup__title">Registracija</div>
+
+        <form class="form" action="#">
+          <div class="form__group">
+            <label class="form__label" for="name">Vardas ir pavardė</label>
+            <input class="form__input" type="text" id="name" placeholder="Įrašykite savo vardą ir pavardę" required />
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="email">El. Paštas</label>
+            <input class="form__input" type="email" id="email" placeholder="Jūsų el.paštas" required />
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="tickets">Bilietai</label>
+              <select class="form__input" id="tickets">
+                <option>Studento 29$</option>
+                <option>Standartinis 89$</option>
+                <option>VIP 179$</option>
+              </select>
+            </div>
+          </div>
+
+          <fieldset class="form__group">
+            <legend class="form__label">Marškinėlių dydžiai</legend>
+            <label class="form__option"><input type="radio" name="size" value="S" checked />S</label>
+            <label class="form__option"><input type="radio" name="size" value="M" />M</label>
+            <label class="form__option"><input type="radio" name="size" value="L" />L</label>
+            <label class="form__option"><input type="radio" name="size" value="XL" />XL</label>
+          </fieldset>
+
+          <div class="form__group">
+            <label class="form__label" for="question">Klausimas pranešėjams</label>
+            <textarea
+              class="form__input"
+              id="question"
+              rows="4"
+              placeholder="Įrašykite savo klausimus, jei turite."></textarea>
+          </div>
+
+          <div class="form__group form__group--checkbox">
+            <label class="form__check">
+              <input class="form__checkbox" type="checkbox" id="subscribe" name="subscribe" />
+              <span class="form__checkText">Sutinku gauti naujienas el.paštu</span>
+            </label>
+          </div>
+
+          <button class="registrationButton">Patvirtinti registracija</button>
+        </form>
+      </section>
+    </section>
     <footer class="footer">
       <div class="footer__brand">
         <div class="footer__logo">
@@ -38,5 +117,6 @@
         <a class="footer__link" href="programa.html">Programa</a>
         <a class="footer__link" href="bilietai.html">Bilietai</a>
       </div>
+    </footer>
   </body>
 </html>
