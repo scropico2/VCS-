@@ -190,6 +190,162 @@ yearsLeft = yearsLeft - 1;
 console.log("Liko metų: " + yearsLeft);
 
 // 6.1
-
+/*
 let message = prompt(`Hello there fella! What is your name?`);
 alert(`Welcome to the page ${message}`);
+
+// 6.2
+
+const userAge = Number(window.prompt("How old are you, there fella?"));
+alert(`${userAge + 1} is old`);
+console.log(`${userAge + 1}`);
+
+// 6.3
+
+const numberLeft = Number(window.prompt("Adding this", 12));
+const numberRight = Number(window.prompt("And this", 5));
+
+console.log(` The answer is ${numberLeft / numberRight} congratulations!`); //
+*/
+
+// 6.4
+const randomNumber = Math.random() * 6;
+const dice = Math.floor(randomNumber) + 1;
+
+console.log(dice);
+
+// 6.5
+
+const sixValue = 7.456;
+
+console.log(Math.round(`${sixValue}`));
+console.log(Math.floor(`${sixValue}`));
+console.log(Math.ceil(`${sixValue}`));
+console.log(sixValue.toFixed(2));
+
+// 7.1
+
+const y = "5";
+const i = 3;
+
+console.log(y + i);
+console.log(y - i);
+console.log(y * i);
+console.log(typeof (y + i));
+
+// 7.2
+
+let o = 5;
+let p = o;
+o = 10;
+console.log(o, p);
+
+let zodelis = "labas";
+let didelis = zodelis.toUpperCase();
+console.log(zodelis, didelis);
+
+// 7.3
+const kaina = 12.5;
+const qty = 3;
+console.log(`Kaina: ${kaina * qty} €`);
+console.log("Kaina: ${kaina * qty} €");
+console.log("Kaina: " + kaina * qty + " €");
+console.log("Kaina: " + kaina + qty + " €");
+
+// 8. 1
+
+let userPrice = 80;
+let userDiscount = 15;
+
+userPrice = 49.99;
+userDiscount = 10;
+
+userPrice = 20;
+userDiscount = 0;
+
+const finalPrice = (userPrice * (100 - userDiscount)) / 100;
+console.log(finalPrice.toFixed(2));
+
+// 8.2
+
+let tableCost = 60;
+let waitressTip = 10;
+let people = 4;
+tableCost = 85;
+waitressTip = 15;
+people = 3;
+
+const theirPrice = tableCost * (1 + waitressTip / 100);
+const perPerson = theirPrice / people;
+console.log(theirPrice.toFixed(2));
+console.log(perPerson.toFixed(2));
+
+// 8.3
+
+let kilometers = 250;
+let liters = 17.5;
+
+kilometers = 180;
+liters = 12;
+const finalCosts = (liters / kilometers) * 100;
+
+console.log(`Sanaudos: ${finalCosts.toFixed(1)} l/100km`);
+
+//8.4
+
+const thisName = "simas";
+
+console.log(thisName.toUpperCase());
+console.log(thisName.length);
+console.log(
+  `First letter issss....${thisName.toUpperCase()[0]}, and the last one iss.....${thisName.toUpperCase()[thisName.length - 1]}`,
+);
+
+// 9. 1 mini project
+
+const cityName = prompt("Miestas:");
+const dayAmount = Number(prompt("Dienu skaicius:"));
+const peopleAmount = Number(prompt("Zmoniu skaicius:"));
+
+console.log(`Kelione: ${cityName}, ${dayAmount} naktys, ${peopleAmount}zm. `);
+
+// 9.2
+
+const nightPrice = 70;
+const foodPrice = 20;
+
+const night = dayAmount - 1;
+const accomodation = night * nightPrice;
+const food = dayAmount * peopleAmount * foodPrice;
+
+console.log(`Nakvyne: ${accomodation.toFixed(2)} eur`);
+console.log(`Maistas: ${food.toFixed(2)} eur`);
+
+// 9.3
+const userDistance = Number(prompt("Atstumas i viena puse(kilometrais):"));
+const consumption = 7;
+const fuelPrice = 1.6;
+
+const userLiters = ((userDistance * 2) / 100) * consumption;
+const userFuel = userLiters * fuelPrice;
+
+console.log(`Sios keliones kuras ${userFuel.toFixed(2)} eur .... `);
+
+// 9.4
+
+const fullTotalPrice = accomodation + foodPrice + userFuel;
+
+const perOurPerson = fullTotalPrice / peopleAmount;
+
+const toTake = Math.ceil(total / 10) * 10;
+
+console.log(`Is viso: ${fullTotalPrice.toFixed(2)} EUR`);
+console.log(`Vienam zmogui islaidu: ${perOurPerson.toFixed(2)} Eur`);
+console.log(`Pasiimk bent ${toTake} eur!`);
+
+// 9.5
+
+const entertainmentPrice = 25;
+const entertainment = peopleAmount * entertainmentPrice;
+
+console.log(`Pramogu kaina: ${entertainment.toFixed(2)}`);
