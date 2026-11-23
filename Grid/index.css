@@ -1,0 +1,35 @@
+body {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+}
+
+div {
+  height: 20rem;
+}
+.gridOne {
+  background-color: brown;
+  grid-column: 2 / 4;
+}
+.nav {
+  display: flex;
+
+  justify-content: end;
+  gap: 12px;
+}
+.navBar {
+  display: flex;
+  padding: 12px;
+}
+.gridTwo {
+  background-color: #ccdd13;
+}
+.gridThree {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  height: 40rem;
+
+  background-color: green;
+}
+.gridFour {
+  background-color: #182564;
+}
