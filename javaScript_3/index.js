@@ -360,3 +360,54 @@ if (reveresedTwo == turned) {
   console.log("ne palindromas");
 }
   */
+
+// 7.1
+/*
+let n = 5;
+
+while (n > 0) {
+  console.log(n);
+  n--;
+}
+  */
+
+//7.2 //reikejo lygybes zenklo
+/*
+const n = 7;
+
+for (let i = 1; i <= 5; i++) {
+  console.log(`${n} x ${i} = ${n * i}`);
+}
+  */
+
+// 7.3
+
+/*
+const word = "Vilnius";
+
+for (let i = 0; i < word.length; i++) {
+  console.log(word[i]);
+}
+  */
+
+//7.4
+/*
+
+let result = 1;
+
+for (let i = 1; i <= 5; i++) {
+  result *= i;
+}
+
+console.log(result);
+
+*/
+
+//7.5
+/*
+
+for (let i = 1; i <= 5; i++) {
+  console.log(i);
+}
+
+*/
